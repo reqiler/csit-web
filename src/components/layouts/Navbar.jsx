@@ -1,74 +1,66 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
     ChevronDown,
     Menu,
     X,
 } from "lucide-react";
 import LanguageSwitcher from "../common/LanguageSwitcher";
-import { menuText } from "../../assets/i18n/menu";
 
-
-const [lang, setLang] = useState("th");
+import { menuText } from "../../assets/i18n/menu.js";
+import { logoText } from "../../assets/i18n/logo.js";
 
 export default function Navbar() {
     const [active, setActive] = useState(null);
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const closeTimer = useRef(null);
 
+    const [lang, setLang] = useState("th");
+    const logo = logoText[lang];
+    const t = menuText[lang];
+
+    const changeLang = (l) => {
+        setLang(l);
+        localStorage.setItem("lang", l);
+    };
+
+    useEffect(() => {
+        const saved = localStorage.getItem("lang");
+        if (saved) setLang(saved);
+    }, []);
+
     const menus = [
         {
-            title: "หลักสูตร",
+            title: t.program,
             children: [
-                { title: "วิทยาการคอมพิวเตอร์", path: "/program-cs" },
-                { title: "เทคโนโลยีสารสนเทศ", path: "/program-it" },
+                { title: t.cs, path: "/program-cs" },
+                { title: t.it, path: "/program-it" },
             ],
         },
         {
-            title: "บุคลากร",
+            title: t.staff,
             path: "/staff",
-            // children: [
-            //     { title: "คณาจารย์", path: "/staff/faculty" },
-            //     { title: "เจ้าหน้าที่", path: "/staff/staff" },
-            // ],
         },
-        // {
-        //     title: "ข่าวสาร",
-        //     path: "/news",
-        //     children: [
-        //         { title: "ข่าวประชาสัมพันธ์", path: "/news/announcements" },
-        //         { title: "ประกาศ", path: "/news/notices" },
-        //     ],
-        // },
         {
-            title: "กิจกรรม",
+            title: t.activity,
             children: [
-                // { title: "กิจกรรมภายใน", path: "/activities/internal" },
-                // { title: "กิจกรรมภายนอก", path: "/activities/external" },
-                { title: "กิจกรรมภายใน", path: "#" },
-                { title: "กิจกรรมภายนอก", path: "#" },
-            ],
-        },
-        // {
-        //     title: "นิสิต",
-        //     path: "/students",
-        // },
-        {
-            title: "เกี่ยวกับเรา",
-            children: [
-                { title: "ประวัติ", path: "/about/history" },
-                { title: "วิสัยทัศน์", path: "/about/vision" },
-                { title: "ติดต่อเรา", path: "/about/contact" },
+                { title: t.activityInternal, path: "#" },
+                { title: t.activityExternal, path: "#" },
             ],
         },
         {
-            title: "โครงงานนักศึกษา",
+            title: t.about,
+            children: [
+                { title: t.history, path: "/about/history" },
+                { title: t.vision, path: "/about/vision" },
+                { title: t.contact, path: "/about/contact" },
+            ],
+        },
+        {
+            title: t.senior,
             path: "https://csit.udru.ac.th:8443/",
-            // children: [
-            //     { title: "คณาจารย์", path: "/staff/faculty" },
-            //     { title: "เจ้าหน้าที่", path: "/staff/staff" },
-            // ],
         },
     ];
+
 
     const handleEnter = (title) => {
         clearTimeout(closeTimer.current);
@@ -96,13 +88,15 @@ export default function Navbar() {
                             />
                             <div className="leading-tight">
                                 <div className="max-w-[220px] font-semibold text-lg text-blue-900 mb-[-5px] truncate">
-                                    สาขาวิทยาการคอมพิวเตอร์
+                                    {logo.line1}
                                 </div>
-                                <div className=" max-w-[215px] font-semibold text-lg text-blue-900 truncate">
-                                    และเทคโนโลยีสารสนเทศ
+
+                                <div className="max-w-[215px] font-semibold text-lg text-blue-900 truncate">
+                                    {logo.line2}
                                 </div>
+
                                 <div className="text-md text-slate-950">
-                                    มหาวิทยาลัยราชภัฏอุดรธานี
+                                    {logo.university}
                                 </div>
                             </div>
                         </div>
@@ -194,7 +188,7 @@ export default function Navbar() {
                     </nav>
 
                     {/* LANGUAGE */}
-                    <LanguageSwitcher />
+                    <LanguageSwitcher value={lang} onChange={changeLang} />
 
                     {/* MOBILE BUTTON */}
                     <button
@@ -292,7 +286,7 @@ export default function Navbar() {
                                                 block px-10 py-2 text-sm
                                                 text-slate-600
                                                 hover:bg-slate-100
-                                                rounded-lg
+                                                rounded-xl
                                                 transition
                                                 "
                                             >
@@ -311,7 +305,14 @@ export default function Navbar() {
                             Language
                         </label>
 
-                        <select className="w-full border rounded-lg px-3 py-2 text-sm">
+                        <select
+                            value={lang}
+                            onChange={(e) => {
+                                changeLang(e.target.value);
+                                setSidebarOpen(false); 
+                            }}
+                            className="w-full border rounded-xl px-3 py-2 text-sm"
+                        >
                             <option value="th">🇹🇭 ไทย</option>
                             <option value="en">🇺🇸 English</option>
                         </select>

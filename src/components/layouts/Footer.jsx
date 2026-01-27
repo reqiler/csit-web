@@ -55,7 +55,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:text-blue-700 transition">
+                <a href="/" className="hover:text-blue-700 transition">
                   หน้าแรก
                 </a>
               </li>

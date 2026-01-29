@@ -7,7 +7,6 @@ import {
 import LanguageSwitcher from "../common/LanguageSwitcher";
 
 import { menuText } from "../../assets/i18n/menu.js";
-import { logoText } from "../../assets/i18n/logo.js";
 
 export default function Navbar() {
     const [active, setActive] = useState(null);
@@ -15,7 +14,6 @@ export default function Navbar() {
     const closeTimer = useRef(null);
 
     const [lang, setLang] = useState("th");
-    const logo = logoText[lang];
     const t = menuText[lang];
 
     const changeLang = (l) => {
@@ -88,15 +86,7 @@ export default function Navbar() {
                             />
                             <div className="leading-tight">
                                 <div className="max-w-[220px] font-semibold text-lg text-blue-900 mb-[-5px] truncate">
-                                    {logo.line1}
-                                </div>
-
-                                <div className="max-w-[215px] font-semibold text-lg text-blue-900 truncate">
-                                    {logo.line2}
-                                </div>
-
-                                <div className="text-md text-slate-950">
-                                    {logo.university}
+                                    <p>CSIT | UDRU</p>
                                 </div>
                             </div>
                         </div>

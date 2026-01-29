@@ -143,7 +143,7 @@ function StaffCard({ staff }) {
             alt={nameTH}
             className="
               relative
-              w-28 h-28
+              w-50 h-50
               rounded-full object-cover
               ring-4 ring-white/80
               shadow-lg

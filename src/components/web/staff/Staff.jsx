@@ -1,6 +1,6 @@
 const staffData = [
     {
-        nameTH: "อาจารย์คุณาวุฒิ บุญกว้าง",
+        nameTH: "à¸­à¸²à¸ˆà¸²à¸£à¸¢à¹Œà¸„à¸¸à¸“à¸²à¸§à¸¸à¸’à¸´ à¸šà¸¸à¸à¸à¸§à¹‰à¸²à¸‡",
         nameEN: "Kunawut Boonkwang",
         email: "",
         research: "Game Design",
@@ -8,7 +8,7 @@ const staffData = [
         img: "/img/staff/1.jpg",
     },
     {
-        nameTH: "รศ.ดร.กริช สมกันธา",
+        nameTH: "à¸£à¸¨.à¸”à¸£.à¸à¸£à¸´à¸Š à¸ªà¸¡à¸à¸±à¸™à¸˜à¸²",
         nameEN: "Assoc.Prof.Dr. Krit Somkantha",
         email: "dr_krit@udru.ac.th",
         research:
@@ -17,7 +17,7 @@ const staffData = [
         img: "/img/staff/2.jpg",
     },
     {
-        nameTH: "ผศ.วิไลพร กุลตังวัฒนา",
+        nameTH: "à¸œà¸¨.à¸§à¸´à¹„à¸¥à¸žà¸£ à¸à¸¸à¸¥à¸•à¸±à¸‡à¸§à¸±à¸’à¸™à¸²",
         nameEN: "Asst.Prof. Wilaiporn Kultangwattana",
         email: "wilaiporn.ku@udru.ac.th",
         research: "Artificial Intelligence, Digital Image Processing",
@@ -25,7 +25,7 @@ const staffData = [
         img: "/img/staff/3.jpg",
     },
     {
-        nameTH: "ผศ.ดร.พิศณุ ชัยจิตวณิชกุล",
+        nameTH: "à¸œà¸¨.à¸”à¸£.à¸žà¸´à¸¨à¸“à¸¸ à¸Šà¸±à¸¢à¸ˆà¸´à¸•à¸§à¸“à¸´à¸Šà¸à¸¸à¸¥",
         nameEN: "Asst.Prof.Dr. Pitsanu Chaichitwanidchakul",
         email: "",
         research: "Mobile Application",
@@ -33,7 +33,7 @@ const staffData = [
         img: "/img/staff/4.jpg",
     },
     {
-        nameTH: "ดร.ปิยวัจน์ ค้าสบาย",
+        nameTH: "à¸”à¸£.à¸›à¸´à¸¢à¸§à¸±à¸ˆà¸™à¹Œ à¸„à¹‰à¸²à¸ªà¸šà¸²à¸¢",
         nameEN: "Dr. Piyawad Kasabai",
         email: "piyawad.k@udru.ac.th",
         research:
@@ -42,7 +42,7 @@ const staffData = [
         img: "/img/staff/5.jpg",
     },
     {
-        nameTH: "ดร.วรรณสิริ ธุระชน",
+        nameTH: "à¸”à¸£.à¸§à¸£à¸£à¸“à¸ªà¸´à¸£à¸´ à¸˜à¸¸à¸£à¸°à¸Šà¸™",
         nameEN: "Dr. Wannasiri Thurachon",
         email: "wannasiri@udru.ac.th",
         research: "Data Mining, Data Science, Machine Learning",
@@ -50,7 +50,7 @@ const staffData = [
         img: "/img/staff/6.jpg",
     },
     {
-        nameTH: "อาจารย์ณรรฐวรรณ์ พูลสน",
+        nameTH: "à¸­à¸²à¸ˆà¸²à¸£à¸¢à¹Œà¸“à¸£à¸£à¸à¸§à¸£à¸£à¸“à¹Œ à¸žà¸¹à¸¥à¸ªà¸™",
         nameEN: "Natthawan Phoonson",
         email: "natthawan.ph@udru.ac.th",
         research: "Augmented Reality, Web API, GIS",
@@ -58,7 +58,7 @@ const staffData = [
         img: "/img/staff/7.jpg",
     },
     {
-        nameTH: "อาจารย์ขวัญชัย สุขแสน",
+        nameTH: "à¸­à¸²à¸ˆà¸²à¸£à¸¢à¹Œà¸‚à¸§à¸±à¸à¸Šà¸±à¸¢ à¸ªà¸¸à¸‚à¹à¸ªà¸™",
         nameEN: "Khwanchai Suksaen",
         email: "khwanchai.su@udru.ac.th",
         research: "Database, Web Technology",
@@ -66,7 +66,7 @@ const staffData = [
         img: "/img/staff/8.jpg",
     },
     {
-        nameTH: "อาจารย์เรวดี พิพัฒน์สูงเนิน",
+        nameTH: "à¸­à¸²à¸ˆà¸²à¸£à¸¢à¹Œà¹€à¸£à¸§à¸”à¸µ à¸žà¸´à¸žà¸±à¸’à¸™à¹Œà¸ªà¸¹à¸‡à¹€à¸™à¸´à¸™",
         nameEN: "Rewadee Piputsoongnern",
         email: "rewadee.ppsn@udru.ac.th",
         research: "Database, Information Retrieval, Mobile Application",
@@ -74,7 +74,7 @@ const staffData = [
         img: "/img/staff/9.jpg",
     },
     {
-        nameTH: "อาจารย์ภาณุพันธุ์ ชื่นบุญ",
+        nameTH: "à¸­à¸²à¸ˆà¸²à¸£à¸¢à¹Œà¸ à¸²à¸“à¸¸à¸žà¸±à¸™à¸˜à¸¸à¹Œ à¸Šà¸·à¹ˆà¸™à¸šà¸¸à¸",
         nameEN: "Phanupan Chuenboon",
         email: "phanupan@udru.ac.th",
         research: "Expert System",
@@ -82,7 +82,7 @@ const staffData = [
         img: "/img/staff/10.jpg",
     },
     {
-        nameTH: "ดร.วันทนี รัฐสมุทร",
+        nameTH: "à¸”à¸£.à¸§à¸±à¸™à¸—à¸™à¸µ à¸£à¸±à¸à¸ªà¸¡à¸¸à¸—à¸£",
         nameEN: "Dr. Wanthanee Rathasamuth",
         email: "wanthanee@udru.ac.th",
         research:
@@ -94,22 +94,25 @@ const staffData = [
 
 export default function StaffPage() {
     return (
-        <section className="max-w-7xl mx-auto px-4 py-20 font-sarabun">
-            {/* HEADER */}
-            <div className="text-center mb-16">
-                <h2 className="text-4xl font-semibold text-gray-800">
-                    อาจารย์ประจำสาขาวิชา
-                </h2>
-                <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-                    คณาจารย์ผู้มีความเชี่ยวชาญด้านการเรียนการสอนและการวิจัย
-                </p>
-            </div>
+        <section className="section-shell">
+            <div className="section-inner">
+                {/* HEADER */}
+                <div className="text-center mb-16">
+                    <p className="section-subtitle mb-3">FACULTY</p>
+                    <h2 className="section-title text-gradient">
+                        à¸­à¸²à¸ˆà¸²à¸£à¸¢à¹Œà¸›à¸£à¸°à¸ˆà¸³à¸ªà¸²à¸‚à¸²à¸§à¸´à¸Šà¸²
+                    </h2>
+                    <p className="text-slate-600 mt-4 max-w-2xl mx-auto">
+                        à¸„à¸“à¸²à¸ˆà¸²à¸£à¸¢à¹Œà¸œà¸¹à¹‰à¸¡à¸µà¸„à¸§à¸²à¸¡à¹€à¸Šà¸µà¹ˆà¸¢à¸§à¸Šà¸²à¸à¸”à¹‰à¸²à¸™à¸à¸²à¸£à¹€à¸£à¸µà¸¢à¸™à¸à¸²à¸£à¸ªà¸­à¸™à¹à¸¥à¸°à¸à¸²à¸£à¸§à¸´à¸ˆà¸±à¸¢
+                    </p>
+                </div>
 
-            {/* GRID */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                {staffData.map((staff, index) => (
-                    <StaffCard key={index} staff={staff} />
-                ))}
+                {/* GRID */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                    {staffData.map((staff, index) => (
+                        <StaffCard key={index} staff={staff} />
+                    ))}
+                </div>
             </div>
         </section>
     );
@@ -122,51 +125,58 @@ function StaffCard({ staff }) {
   return (
     <div
       className="
-        group bg-white rounded-2xl max-w-sm mx-auto
-        shadow-sm hover:shadow-lg
-        transition-all duration-300
+        surface-card
+        p-8
+        max-w-sm
+        mx-auto
         flex flex-col
+        animate-fade-up
+        group
       "
     >
       {/* AVATAR */}
-      <div className="flex justify-center pt-8">
-        <img
-          src={img}
-          alt={nameTH}
-          className="
-            w-1 h-1
-            rounded-full object-cover
-            ring-4 ring-white
-            shadow-md
-          "
-          onError={(e) => {
-            e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(
-              nameTH
-            )}&background=1f2937&color=fff&size=256`;
-          }}
-        />
+      <div className="flex justify-center">
+        <div className="relative">
+          <div className="absolute -inset-2 rounded-full bg-blue-300/40 blur-2xl" />
+          <img
+            src={img}
+            alt={nameTH}
+            className="
+              relative
+              w-28 h-28
+              rounded-full object-cover
+              ring-4 ring-white/80
+              shadow-lg
+            "
+            onError={(e) => {
+              e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(
+                nameTH
+              )}&background=1f2937&color=fff&size=256`;
+            }}
+          />
+        </div>
       </div>
 
       {/* CONTENT */}
-      <div className="px-6 pt-6 pb-8 text-center flex flex-col flex-1">
+      <div className="pt-6 text-center flex flex-col flex-1">
         {/* NAME */}
-        <h3 className="text-base font-semibold text-gray-800 leading-snug">
+        <h3 className="text-base font-semibold text-slate-900 leading-snug">
           {nameTH}
         </h3>
-        <p className="text-sm text-gray-500 mt-1">
+        <p className="text-sm text-slate-500 mt-1">
           {nameEN}
         </p>
 
-        <div className="my-4 h-px bg-gray-100" />
+        <div className="my-4 h-px bg-slate-200/70" />
 
         {/* INFO */}
-        <div className="space-y-4 text-sm text-gray-700 flex-1 text-left">
+        <div className="space-y-4 text-sm text-slate-700 flex-1 text-left">
           {email && (
             <p>
               <span className="font-medium">Email:</span>{" "}
               <a
                 href={`mailto:${email}`}
-                className="text-blue-600 hover:underline break-all"
+                className="text-blue-600 hover:text-blue-700 transition break-all"
               >
                 {email}
               </a>
@@ -175,16 +185,16 @@ function StaffCard({ staff }) {
 
           {research ? (
             <div>
-              <p className="font-medium mb-1 text-gray-800">
+              <p className="font-medium mb-1 text-slate-800">
                 Research Interests
               </p>
-              <p className="text-gray-600 leading-relaxed line-clamp-3">
+              <p className="text-slate-600 leading-relaxed line-clamp-3">
                 {research}
               </p>
             </div>
           ) : (
-            <p className="italic text-gray-400">
-              ยังไม่มีข้อมูลด้านงานวิจัย
+            <p className="italic text-slate-400">
+              à¸¢à¸±à¸‡à¹„à¸¡à¹ˆà¸¡à¸µà¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸”à¹‰à¸²à¸™à¸‡à¸²à¸™à¸§à¸´à¸ˆà¸±à¸¢
             </p>
           )}
         </div>
@@ -199,12 +209,12 @@ function StaffCard({ staff }) {
               className="
                 inline-flex items-center gap-1
                 text-blue-600 font-medium
-                hover:underline
+                hover:text-blue-700
               "
             >
               Personal Website
               <span className="transition-transform group-hover:translate-x-1">
-                →
+                â†’
               </span>
             </a>
           </div>
@@ -213,9 +223,3 @@ function StaffCard({ staff }) {
     </div>
   );
 }
-
-
-
-
-
-

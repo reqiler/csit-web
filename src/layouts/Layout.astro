@@ -14,9 +14,15 @@ import Footer from "../components/layouts/Footer.jsx";
     <title>สาขาวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ | UDRU</title>
   </head>
 
-  <body class="min-h-screen bg-white text-slate-800">
-		<Navbar client:load />
-		<slot />
+  <body class="min-h-screen app-body">
+    <div class="bg-orb bg-orb-1" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb-3" aria-hidden="true"></div>
+
+		<Navbar client:idle />
+    <main class="relative z-10">
+		  <slot />
+    </main>
 		<Footer />
   </body>
 </html>

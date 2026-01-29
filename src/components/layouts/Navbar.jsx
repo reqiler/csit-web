@@ -59,7 +59,6 @@ export default function Navbar() {
         },
     ];
 
-
     const handleEnter = (title) => {
         clearTimeout(closeTimer.current);
         setActive(title);
@@ -74,119 +73,107 @@ export default function Navbar() {
     return (
         <>
             {/* ================= NAVBAR ================= */}
-            <header className="bg-white py-2 sticky top-0 z-50 shadow-xs">
-                <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                    {/* LOGO */}
-                    <a href="/">
-                        <div className="flex items-center gap-4">
-                            <img
-                                src="/favicon.png"
-                                alt="CS-IT"
-                                className="h-12 w-12"
-                            />
-                            <div className="leading-tight">
-                                <div className="max-w-[220px] font-semibold text-lg text-blue-900 mb-[-5px] truncate">
-                                    <p>CSIT | UDRU</p>
+            <header className="sticky top-0 z-50 pt-4">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="nav-shell">
+                        {/* LOGO */}
+                        <a href="/">
+                            <div className="flex items-center gap-3">
+                                <div className="relative">
+                                    <div className="absolute inset-0 rounded-full bg-blue-500/30 blur-md" />
+                                    <img
+                                        src="/favicon.png"
+                                        alt="CS-IT"
+                                        className="relative h-12 w-12 rounded-full bg-white/80 p-2 shadow-md"
+                                    />
+                                </div>
+                                <div className="leading-tight">
+                                    <div className="max-w-[220px] font-semibold text-lg text-slate-900 truncate">
+                                        <p className="text-gradient">CSIT | UDRU</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
 
-                    {/* DESKTOP MENU */}
-                    <nav className="hidden lg:flex items-center py-4 gap-8">
-                        {menus.map((menu) => {
-                            const isOpen = active === menu.title;
+                        {/* DESKTOP MENU */}
+                        <nav className="hidden lg:flex items-center gap-8">
+                            {menus.map((menu) => {
+                                const isOpen = active === menu.title;
 
-                            return (
-                                <div
-                                    key={menu.title}
-                                    className="relative"
-                                    onMouseEnter={() => handleEnter(menu.title)}
-                                    onMouseLeave={handleLeave}
-                                >
-                                    {/* ===== MENU BUTTON / LINK ===== */}
-                                    {menu.children ? (
-                                        // 🔹 เมนูที่มี dropdown
-                                        <button
-                                            type="button"
-                                            onClick={() =>
-                                                setActive(isOpen ? null : menu.title)
-                                            }
-                                            className="
-                                            flex items-center gap-2
-                                            text-slate-700 font-medium
-                                            hover:text-blue-900
-                                            transition
-                                            "
-                                        >
-                                            {menu.title}
-                                            <ChevronDown
-                                                size={16}
-                                                className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""
-                                                    }`}
-                                            />
-                                        </button>
-                                    ) : (
-                                        // 🔹 เมนูปกติ
-                                        <a
-                                            href={menu.path}
-                                            className="
-                                            flex items-center gap-2
-                                            text-slate-700 font-medium
-                                            hover:text-blue-900
-                                            transition
-                                            "
-                                        >
-                                            {menu.title}
-                                        </a>
-                                    )}
-
-                                    {/* ===== DROPDOWN ===== */}
-                                    {menu.children && (
-                                        <div
-                                            className={`
-                                            absolute left-0 top-full mt-3 w-56
-                                            rounded-xl bg-white
-                                            shadow-lg ring-1 ring-black/5
-                                            overflow-hidden
-                                            transition-all duration-150 ease-out origin-top
-                                            ${isOpen
-                                                    ? "opacity-100 scale-100 translate-y-0"
-                                                    : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+                                return (
+                                    <div
+                                        key={menu.title}
+                                        className="relative"
+                                        onMouseEnter={() => handleEnter(menu.title)}
+                                        onMouseLeave={handleLeave}
+                                    >
+                                        {/* ===== MENU BUTTON / LINK ===== */}
+                                        {menu.children ? (
+                                            // ðŸ”¹ à¹€à¸¡à¸™à¸¹à¸—à¸µà¹ˆà¸¡à¸µ dropdown
+                                            <button
+                                                type="button"
+                                                onClick={() =>
+                                                    setActive(isOpen ? null : menu.title)
                                                 }
-            `}
-                                        >
-                                            {menu.children.map((child) => (
-                                                <a
-                                                    key={child.path}
-                                                    href={child.path}
-                                                    className="
-                                                    block px-5 py-3
-                                                    text-sm text-slate-700
-                                                    hover:bg-slate-100
-                                                    transition
-                                                    "
-                                                >
-                                                    {child.title}
-                                                </a>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
-                            );
-                        })}
-                    </nav>
+                                                className="nav-link flex items-center gap-2"
+                                            >
+                                                {menu.title}
+                                                <ChevronDown
+                                                    size={16}
+                                                    className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                                                        }`}
+                                                />
+                                            </button>
+                                        ) : (
+                                            // ðŸ”¹ à¹€à¸¡à¸™à¸¹à¸›à¸à¸•à¸´
+                                            <a
+                                                href={menu.path}
+                                                className="nav-link flex items-center gap-2"
+                                            >
+                                                {menu.title}
+                                            </a>
+                                        )}
 
-                    {/* LANGUAGE */}
-                    <LanguageSwitcher value={lang} onChange={changeLang} />
+                                        {/* ===== DROPDOWN ===== */}
+                                        {menu.children && (
+                                            <div
+                                                className={`
+                                                absolute left-0 top-full mt-3 w-56
+                                                dropdown-panel
+                                                transition-all duration-150 ease-out origin-top
+                                                ${isOpen
+                                                        ? "opacity-100 scale-100 translate-y-0"
+                                                        : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+                                                    }
+                `}
+                                            >
+                                                {menu.children.map((child) => (
+                                                    <a
+                                                        key={child.path}
+                                                        href={child.path}
+                                                        className="dropdown-item"
+                                                    >
+                                                        {child.title}
+                                                    </a>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                );
+                            })}
+                        </nav>
 
-                    {/* MOBILE BUTTON */}
-                    <button
-                        onClick={() => setSidebarOpen(true)}
-                        className="lg:hidden"
-                    >
-                        <Menu size={28} />
-                    </button>
+                        {/* LANGUAGE */}
+                        <LanguageSwitcher value={lang} onChange={changeLang} />
+
+                        {/* MOBILE BUTTON */}
+                        <button
+                            onClick={() => setSidebarOpen(true)}
+                            className="icon-button lg:hidden"
+                        >
+                            <Menu size={24} />
+                        </button>
+                    </div>
                 </div>
             </header>
 
@@ -194,7 +181,7 @@ export default function Navbar() {
             <div
                 onClick={() => setSidebarOpen(false)}
                 className={`
-                fixed inset-0 bg-black/40 z-40
+                fixed inset-0 bg-slate-900/35 backdrop-blur-sm z-40
                 transition-opacity duration-300
                 ${sidebarOpen ? "opacity-100" : "opacity-0 pointer-events-none"}
                 `}
@@ -203,17 +190,17 @@ export default function Navbar() {
             {/* ================= SIDEBAR ================= */}
             <aside
                 className={`
-                fixed top-0 right-0 h-full w-80 bg-white z-50
-                shadow-2xl
+                fixed top-0 right-0 h-full w-80 glass-panel z-50
+                rounded-l-3xl
                 transform transition-transform duration-300 ease-in-out
                 ${sidebarOpen ? "translate-x-0" : "translate-x-full"}
                 `}
             >
                 {/* SIDEBAR HEADER */}
                 <div className="flex items-center justify-between px-6 h-20">
-                    <span className="font-semibold text-lg">เมนูหลัก</span>
-                    <button onClick={() => setSidebarOpen(false)}>
-                        <X size={24} />
+                    <span className="font-semibold text-lg text-slate-900">à¹€à¸¡à¸™à¸¹à¸«à¸¥à¸±à¸</span>
+                    <button onClick={() => setSidebarOpen(false)} className="icon-button">
+                        <X size={18} />
                     </button>
                 </div>
 
@@ -229,8 +216,8 @@ export default function Navbar() {
                                 className="
                                 list-none cursor-pointer
                                 px-4 py-3 flex items-center justify-between
-                                rounded-xl
-                                hover:bg-slate-100
+                                rounded-2xl
+                                hover:bg-white/70
                                 transition
                                 "
                             >
@@ -275,7 +262,7 @@ export default function Navbar() {
                                                 className="
                                                 block px-10 py-2 text-sm
                                                 text-slate-600
-                                                hover:bg-slate-100
+                                                hover:bg-white/70
                                                 rounded-xl
                                                 transition
                                                 "
@@ -291,7 +278,7 @@ export default function Navbar() {
 
                     {/* LANGUAGE */}
                     <div className="mt-6 px-4 pb-6">
-                        <label className="block mb-2 text-xs text-slate-500">
+                        <label className="block mb-2 text-xs text-slate-500 uppercase tracking-widest">
                             Language
                         </label>
 
@@ -299,12 +286,12 @@ export default function Navbar() {
                             value={lang}
                             onChange={(e) => {
                                 changeLang(e.target.value);
-                                setSidebarOpen(false); 
+                                setSidebarOpen(false);
                             }}
-                            className="w-full border rounded-xl px-3 py-2 text-sm"
+                            className="w-full rounded-xl px-3 py-2 text-sm bg-white/80 border border-white/80 shadow-sm"
                         >
-                            <option value="th">🇹🇭 ไทย</option>
-                            <option value="en">🇺🇸 English</option>
+                            <option value="th">ðŸ‡¹ðŸ‡­ à¹„à¸—à¸¢</option>
+                            <option value="en">ðŸ‡ºðŸ‡¸ English</option>
                         </select>
                     </div>
                 </div>

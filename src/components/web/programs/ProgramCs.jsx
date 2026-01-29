@@ -1,11 +1,11 @@
 export default function ProgramCS() {
     return (
-        <section className="bg-white py-20">
-            <div className="max-w-7xl mx-auto px-6 space-y-8">
+        <section className="section-shell">
+            <div className="section-inner space-y-10">
 
                 {/* ===== TITLE ===== */}
                 <div>
-                    <h1 className="text-3xl font-bold text-slate-900 mb-2">
+                    <h1 className="text-3xl md:text-4xl font-semibold text-slate-900 text-gradient mb-2">
                         วิทยาศาสตรบัณฑิต สาขาวิชาวิทยาการคอมพิวเตอร์
                     </h1>
                     <p className="text-slate-600">
@@ -14,7 +14,7 @@ export default function ProgramCS() {
                 </div>
 
                 {/* ===== OVERVIEW ===== */}
-                <div className="grid md:grid-cols-2 gap-8 text-sm text-slate-700">
+                <div className="surface-card p-6 md:p-8 grid md:grid-cols-2 gap-8 text-sm text-slate-600">
                     <ul className="space-y-2">
                         <li><strong>ระดับการศึกษา:</strong> ปริญญาตรี (โครงการปกติ)</li>
                         <li><strong>คณะ:</strong> คณะวิทยาศาสตร์</li>
@@ -212,10 +212,13 @@ export default function ProgramCS() {
 /* ===== REUSABLE COMPONENTS ===== */
 function Section({ title, children }) {
     return (
-        <div className="space-y-3">
-            <h2 className="text-xl font-bold border-l-4 border-blue-900 pl-4 text-slate-900">
-                {title}
-            </h2>
+        <div className="surface-card p-8 md:p-10 space-y-5 animate-fade-up">
+            <div className="flex items-start gap-4">
+                <span className="mt-3 h-2.5 w-2.5 rounded-full bg-blue-600 shadow-[0_0_12px_rgba(37,99,235,0.6)]" />
+                <h2 className="text-xl md:text-2xl font-semibold text-slate-900">
+                    {title}
+                </h2>
+            </div>
             {children}
         </div>
     );
@@ -223,7 +226,7 @@ function Section({ title, children }) {
 
 function SubSection({ title, children }) {
     return (
-        <div className="space-y-2">
+        <div className="space-y-3">
             <h3 className="text-lg font-semibold text-slate-800">
                 {title}
             </h3>
@@ -234,18 +237,18 @@ function SubSection({ title, children }) {
 
 function CourseTable({ courses }) {
     return (
-        <div className="overflow-x-auto border rounded-xl mb-8">
+        <div className="table-shell mb-8">
             <table className="w-full text-sm">
-                <thead className="bg-slate-100">
+                <thead className="table-head">
                     <tr>
-                        <th className="px-4 py-3 text-left">รหัสวิชา</th>
-                        <th className="px-4 py-3 text-left">รายวิชา</th>
-                        <th className="px-4 py-3 text-left">หน่วยกิต</th>
+                        <th className="px-4 py-3 text-left">à¸£à¸«à¸±à¸ªà¸§à¸´à¸à¸²</th>
+                        <th className="px-4 py-3 text-left">à¸£à¸²à¸¢à¸§à¸´à¸à¸²</th>
+                        <th className="px-4 py-3 text-left">à¸«à¸à¹à¸§à¸¢à¸à¸´à¸</th>
                     </tr>
                 </thead>
-                <tbody className="divide-y">
+                <tbody className="divide-y divide-white/60">
                     {courses.map((c, i) => (
-                        <tr key={i} className="hover:bg-slate-50">
+                        <tr key={i} className="hover:bg-blue-50/40 transition">
                             <td className="px-4 py-3 font-medium whitespace-nowrap">
                                 {c[0]}
                             </td>
@@ -265,4 +268,5 @@ function CourseTable({ courses }) {
         </div>
     );
 }
+
 

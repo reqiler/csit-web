@@ -17,7 +17,7 @@ export default function LanguageSwitcher({ value = "th", onChange }) {
   }, []);
 
   const selectLang = (lang) => {
-    onChange?.(lang);          // à¹à¸ˆà¹‰à¸‡ parent (Navbar)
+    onChange?.(lang);          // แจ้ง parent (Navbar)
     localStorage.setItem("lang", lang);
     setOpen(false);
   };

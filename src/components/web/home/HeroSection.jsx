@@ -27,11 +27,10 @@ export default function HeroSlider() {
   return (
     <section className="relative overflow-hidden pt-10 pb-16">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-24 left-10 h-72 w-72 rounded-full bg-blue-400/30 blur-3xl animate-float" />
-        <div className="absolute bottom-10 right-16 h-64 w-64 rounded-full bg-blue-200/40 blur-3xl animate-float" />
+        <div className="absolute -top-20 left-6 h-64 w-64 rounded-full bg-blue-400/25 blur-2xl md:animate-float hidden md:block" />
       </div>
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="relative animate-fade-up">
           <div className="hero-frame animate-glow">
             {/* ===== SLIDES WRAPPER ===== */}
@@ -58,6 +57,8 @@ export default function HeroSlider() {
                     <img
                       src={img}
                       alt={`slide-${i}`}
+                      loading={i === 0 ? "eager" : "lazy"}
+                      decoding="async"
                       className="
                         absolute inset-0
                         w-full h-full

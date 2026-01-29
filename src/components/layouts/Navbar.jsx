@@ -84,7 +84,7 @@ export default function Navbar() {
                                     <img
                                         src="/favicon.png"
                                         alt="CS-IT"
-                                        className="relative h-12 w-12 rounded-full bg-white/80 p-2 shadow-md"
+                                        className="relative h-12 w-12 rounded-full bg-white/80 shadow-md"
                                     />
                                 </div>
                                 <div className="leading-tight">

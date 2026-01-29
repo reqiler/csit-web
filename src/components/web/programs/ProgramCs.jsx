@@ -241,9 +241,9 @@ function CourseTable({ courses }) {
             <table className="w-full text-sm">
                 <thead className="table-head">
                     <tr>
-                        <th className="px-4 py-3 text-left">à¸£à¸«à¸±à¸ªà¸§à¸´à¸à¸²</th>
-                        <th className="px-4 py-3 text-left">à¸£à¸²à¸¢à¸§à¸´à¸à¸²</th>
-                        <th className="px-4 py-3 text-left">à¸«à¸à¹à¸§à¸¢à¸à¸´à¸</th>
+                        <th className="px-4 py-3 text-left">รหัสวิชา</th>
+                        <th className="px-4 py-3 text-left">รายวิชา</th>
+                        <th className="px-4 py-3 text-left">หน่วยกิต</th>
                     </tr>
                 </thead>
                 <tbody className="divide-y divide-white/60">

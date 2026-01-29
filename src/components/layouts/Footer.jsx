@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="relative z-10 mt-20 text-slate-700">
       <div className="footer-shell">
-        <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
           <div className="grid gap-12 md:grid-cols-4">
             {/* ===== LOGO / INFO ===== */}
             <div>
@@ -10,19 +10,19 @@ export default function Footer() {
                 <img
                   src="/favicon.png"
                   alt="CSIT UDRU"
-                  className="h-12 w-12 rounded-full bg-white/80 p-2 shadow-md"
+                  className="h-12 w-12 rounded-full bg-white/80 shadow-md"
                 />
                 <div>
                   <p className="font-semibold text-slate-900 leading-tight">
-                    à¸ªà¸²à¸‚à¸²à¸§à¸´à¸—à¸¢à¸²à¸à¸²à¸£à¸„à¸­à¸¡à¸žà¸´à¸§à¹€à¸•à¸­à¸£à¹Œ
+                    สาขาวิทยาการคอมพิวเตอร์
                   </p>
                   <p className="font-semibold text-slate-900">
-                    à¹à¸¥à¸°à¹€à¸—à¸„à¹‚à¸™à¹‚à¸¥à¸¢à¸µà¸ªà¸²à¸£à¸ªà¸™à¹€à¸—à¸¨
+                    และเทคโนโลยีสารสนเทศ
                   </p>
                 </div>
               </div>
               <p className="text-sm leading-relaxed text-slate-600">
-                à¸ªà¸–à¸²à¸šà¸±à¸™à¹à¸«à¹ˆà¸‡à¸™à¸§à¸±à¸•à¸à¸£à¸£à¸¡à¸”à¹‰à¸²à¸™à¸§à¸´à¸—à¸¢à¸²à¸¨à¸²à¸ªà¸•à¸£à¹Œà¹à¸¥à¸°à¹€à¸—à¸„à¹‚à¸™à¹‚à¸¥à¸¢à¸µà¹€à¸žà¸·à¹ˆà¸­à¸à¸²à¸£à¸žà¸±à¸’à¸™à¸²à¸Šà¸¸à¸¡à¸Šà¸™à¸—à¸µà¹ˆà¸¢à¸±à¹ˆà¸‡à¸¢à¸·à¸™
+                สถาบันแห่งนวัตกรรมด้านวิทยาศาสตร์และเทคโนโลยีเพื่อการพัฒนาชุมชนที่ยั่งยืน
               </p>
 
             </div>
@@ -30,21 +30,21 @@ export default function Footer() {
             {/* ===== CONTACT ===== */}
             <div>
               <h4 className="text-slate-900 font-semibold mb-4">
-                à¸•à¸´à¸”à¸•à¹ˆà¸­à¸ªà¸²à¸‚à¸²
+                ติดต่อสาขา
               </h4>
               <ul className="space-y-2 text-sm text-slate-600">
                 <li>
-                  à¸„à¸“à¸°à¸§à¸´à¸—à¸¢à¸²à¸¨à¸²à¸ªà¸•à¸£à¹Œ
-                  à¸¡à¸«à¸²à¸§à¸´à¸—à¸¢à¸²à¸¥à¸±à¸¢à¸£à¸²à¸Šà¸ à¸±à¸à¸­à¸¸à¸”à¸£à¸˜à¸²à¸™à¸µ
+                  คณะวิทยาศาสตร์
+                  มหาวิทยาลัยราชภัฏอุดรธานี
                 </li>
                 <li>
-                  234 à¸«à¸¡à¸¹à¹ˆ 12 à¸•.à¸ªà¸²à¸¡à¸žà¸£à¹‰à¸²à¸§ à¸­.à¹€à¸¡à¸·à¸­à¸‡ à¸ˆ.à¸­à¸¸à¸”à¸£à¸˜à¸²à¸™à¸µ 41000
+                  234 หมู่ 12 ต.สามพร้าว อ.เมือง จ.อุดรธานี 41000
                 </li>
                 {/* <li>
-                  à¹‚à¸—à¸£à¸¨à¸±à¸žà¸—à¹Œ: 042-211-040
+                  โทรศัพท์: 042-211-040
                 </li> */}
                 <li>
-                  à¸­à¸µà¹€à¸¡à¸¥: csit@udru.ac.th
+                  อีเมล: csit@udru.ac.th
                 </li>
               </ul>
             </div>
@@ -52,32 +52,32 @@ export default function Footer() {
             {/* ===== QUICK LINKS ===== */}
             <div>
               <h4 className="text-slate-900 font-semibold mb-4">
-                à¹€à¸¡à¸™à¸¹à¸¥à¸±à¸”
+                เมนูลัด
               </h4>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="/" className="hover:text-blue-700 transition">
-                    à¸«à¸™à¹‰à¸²à¹à¸£à¸
+                    หน้าแรก
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-blue-700 transition">
-                    à¸«à¸¥à¸±à¸à¸ªà¸¹à¸•à¸£ CS
+                    หลักสูตร CS
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-blue-700 transition">
-                    à¸«à¸¥à¸±à¸à¸ªà¸¹à¸•à¸£ IT
+                    หลักสูตร IT
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-blue-700 transition">
-                    à¸šà¸¸à¸„à¸¥à¸²à¸à¸£
+                    บุคลากร
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-blue-700 transition">
-                    à¸•à¸´à¸”à¸•à¹ˆà¸­à¹€à¸£à¸²
+                    ติดต่อเรา
                   </a>
                 </li>
               </ul>
@@ -86,7 +86,7 @@ export default function Footer() {
             {/* ===== SOCIAL ===== */}
             <div>
               <h4 className="text-slate-900 font-semibold mb-4">
-                à¸•à¸´à¸”à¸•à¸²à¸¡à¹€à¸£à¸²
+                ติดตามเรา
               </h4>
               <div className="flex items-center gap-4 text-sm">
                 <a
@@ -120,12 +120,12 @@ export default function Footer() {
 
       {/* ===== COPYRIGHT ===== */}
       <div className="bg-white/80 border-t border-white/70 backdrop-blur">
-        <div className="max-w-7xl mx-auto px-6 py-5 text-sm text-slate-500 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 text-sm text-slate-500 text-center">
           <span className="mr-2">
-            Â© {new Date().getFullYear()}
+            © {new Date().getFullYear()}
           </span>
-          à¸ªà¸²à¸‚à¸²à¸§à¸´à¸—à¸¢à¸²à¸à¸²à¸£à¸„à¸­à¸¡à¸žà¸´à¸§à¹€à¸•à¸­à¸£à¹Œà¹à¸¥à¸°à¹€à¸—à¸„à¹‚à¸™à¹‚à¸¥à¸¢à¸µà¸ªà¸²à¸£à¸ªà¸™à¹€à¸—à¸¨
-          à¸¡à¸«à¸²à¸§à¸´à¸—à¸¢à¸²à¸¥à¸±à¸¢à¸£à¸²à¸Šà¸ à¸±à¸à¸­à¸¸à¸”à¸£à¸˜à¸²à¸™à¸µ
+          สาขาวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ
+          มหาวิทยาลัยราชภัฏอุดรธานี
         </div>
       </div>
     </footer>

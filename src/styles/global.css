@@ -28,6 +28,7 @@
     color: var(--text);
     position: relative;
     -webkit-font-smoothing: antialiased;
+    line-height: 1.7;
     background:
       radial-gradient(720px 360px at 6% -10%, rgba(59, 130, 246, 0.22), transparent 60%),
       radial-gradient(620px 340px at 90% 8%, rgba(37, 99, 235, 0.16), transparent 55%),
@@ -61,10 +62,12 @@
   h5 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
+    line-height: 1.15;
   }
 
   p {
     color: var(--muted);
+    line-height: 1.75;
   }
 
   a {
@@ -120,31 +123,31 @@
     background: var(--glass);
     border: 1px solid rgba(255, 255, 255, 0.55);
     box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08), 0 8px 18px rgba(37, 99, 235, 0.12);
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(16px);
   }
 
   .glass-strong {
     background: var(--glass-strong);
     border: 1px solid rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(22px);
+    backdrop-filter: blur(18px);
   }
 
   .surface-card {
     @apply rounded-3xl;
     background: rgba(255, 255, 255, 0.82);
     border: 1px solid var(--border);
-    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08), 0 6px 20px rgba(37, 99, 235, 0.08);
+    box-shadow: 0 18px 50px rgba(15, 23, 42, 0.07), 0 6px 18px rgba(37, 99, 235, 0.08);
     transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
   }
 
   .surface-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 28px 70px rgba(37, 99, 235, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 24px 60px rgba(37, 99, 235, 0.14);
     border-color: rgba(37, 99, 235, 0.35);
   }
 
   .section-shell {
-    @apply relative py-16 md:py-24;
+    @apply relative py-20 md:py-28;
   }
 
   .section-accent {
@@ -152,11 +155,11 @@
   }
 
   .section-inner {
-    @apply max-w-7xl mx-auto px-4 sm:px-6;
+    @apply max-w-7xl mx-auto px-5 sm:px-8 lg:px-10;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-semibold text-slate-900;
+    @apply text-4xl md:text-5xl font-semibold text-slate-900;
   }
 
   .section-subtitle {
@@ -175,7 +178,7 @@
     background: rgba(255, 255, 255, 0.72);
     border: 1px solid rgba(255, 255, 255, 0.7);
     box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(16px);
   }
 
   .nav-link {
@@ -228,7 +231,7 @@
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.8);
     box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(14px);
   }
 
   .dropdown-item {
@@ -245,7 +248,7 @@
     background: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.7);
     box-shadow: 0 24px 60px rgba(37, 99, 235, 0.2);
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(14px);
   }
 
   .hero-overlay {

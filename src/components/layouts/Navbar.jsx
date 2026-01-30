@@ -75,7 +75,7 @@ export default function Navbar() {
             {/* ================= NAVBAR ================= */}
             <header className="sticky top-0 z-50 pt-4">
                 <div className="max-w-7xl mx-auto px-4">
-                    <div className="nav-shell">
+                    <div className="nav-shell rounded-3xl">
                         {/* LOGO */}
                         <a href="/">
                             <div className="flex items-center gap-3">

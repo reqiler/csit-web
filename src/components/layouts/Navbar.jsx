@@ -109,7 +109,7 @@ export default function Navbar() {
                                     >
                                         {/* ===== MENU BUTTON / LINK ===== */}
                                         {menu.children ? (
-                                            // ðŸ”¹ à¹€à¸¡à¸™à¸¹à¸—à¸µà¹ˆà¸¡à¸µ dropdown
+                                            // เมนูที่มี dropdown
                                             <button
                                                 type="button"
                                                 onClick={() =>
@@ -125,7 +125,7 @@ export default function Navbar() {
                                                 />
                                             </button>
                                         ) : (
-                                            // ðŸ”¹ à¹€à¸¡à¸™à¸¹à¸›à¸à¸•à¸´
+                                            // เมนูปกติ
                                             <a
                                                 href={menu.path}
                                                 className="nav-link flex items-center gap-2"
@@ -198,7 +198,7 @@ export default function Navbar() {
             >
                 {/* SIDEBAR HEADER */}
                 <div className="flex items-center justify-between px-6 h-20">
-                    <span className="font-semibold text-lg text-slate-900">à¹€à¸¡à¸™à¸¹à¸«à¸¥à¸±à¸</span>
+                    <span className="font-semibold text-lg text-slate-900">เมนูหลัก</span>
                     <button onClick={() => setSidebarOpen(false)} className="icon-button">
                         <X size={18} />
                     </button>
@@ -290,8 +290,8 @@ export default function Navbar() {
                             }}
                             className="w-full rounded-xl px-3 py-2 text-sm bg-white/80 border border-white/80 shadow-sm"
                         >
-                            <option value="th">ðŸ‡¹ðŸ‡­ à¹„à¸—à¸¢</option>
-                            <option value="en">ðŸ‡ºðŸ‡¸ English</option>
+                            <option value="th">ไทย</option>
+                            <option value="en">English</option>
                         </select>
                     </div>
                 </div>

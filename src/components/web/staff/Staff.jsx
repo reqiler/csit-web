@@ -127,7 +127,8 @@ function StaffCard({ staff }) {
       className="
         surface-card
         p-8
-        w-sm
+        w-[320px]
+        md:w-sm
         mx-auto
         flex flex-col
         animate-fade-up

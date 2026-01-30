@@ -48,8 +48,8 @@ export default function Navbar() {
         {
             title: t.about,
             children: [
-                { title: t.history, path: "/about/history" },
-                { title: t.vision, path: "/about/vision" },
+                { title: t.history, path: "#" },
+                { title: t.vision, path: "#" },
                 { title: t.contact, path: "/about/contact" },
             ],
         },

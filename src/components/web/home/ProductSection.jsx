@@ -100,7 +100,7 @@ export default function ProductsAndServices() {
         </div>
 
         {/* TABLE */}
-        <div className="table-shell">
+        <div className="table-shell table-lite table-heavy">
           <table className="w-full text-sm">
             <thead className="table-head text-left">
               <tr>
@@ -118,7 +118,7 @@ export default function ProductsAndServices() {
 
             <tbody className="divide-y divide-white/60">
               {projects.map((p, i) => (
-                <tr key={i} className="hover:bg-blue-50/40 transition">
+                <tr key={i} className="table-row">
                   <td className="px-6 py-4 leading-relaxed">
                     <div className="font-medium text-slate-800">{p.topicTH}</div>
                     <div className="text-slate-500 text-xs mt-1">

@@ -1,6 +1,6 @@
 export default function ProgramCS() {
     return (
-        <section className="section-shell">
+        <section className="section-shell no-effects">
             <div className="section-inner space-y-10">
 
                 {/* ===== TITLE ===== */}
@@ -237,7 +237,7 @@ function SubSection({ title, children }) {
 
 function CourseTable({ courses }) {
     return (
-        <div className="table-shell mb-8">
+        <div className="table-shell table-lite table-heavy mb-8">
             <table className="w-full text-sm">
                 <thead className="table-head">
                     <tr>
@@ -248,7 +248,7 @@ function CourseTable({ courses }) {
                 </thead>
                 <tbody className="divide-y divide-white/60">
                     {courses.map((c, i) => (
-                        <tr key={i} className="hover:bg-blue-50/40 transition">
+                        <tr key={i} className="table-row">
                             <td className="px-4 py-3 font-medium whitespace-nowrap">
                                 {c[0]}
                             </td>

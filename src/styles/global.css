@@ -258,11 +258,57 @@
     border: 1px solid rgba(255, 255, 255, 0.75);
     box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
     backdrop-filter: blur(16px);
+    contain: content;
+  }
+
+  .table-shell.table-lite {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    backdrop-filter: none;
+  }
+
+  .table-shell.table-heavy {
+    content-visibility: auto;
+    contain-intrinsic-size: 900px 600px;
   }
 
   .table-head {
     background: rgba(148, 163, 184, 0.12);
     color: #1e293b;
+  }
+
+  .table-row {
+    background: transparent;
+  }
+
+  @media (hover: hover) {
+    .table-row:hover {
+      background: rgba(59, 130, 246, 0.08);
+    }
+  }
+
+  .no-effects .surface-card {
+    transition: none;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  }
+
+  .no-effects .surface-card:hover {
+    transform: none;
+    border-color: var(--border);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  }
+
+  .no-effects .animate-fade-up {
+    animation: none;
+  }
+
+  .no-effects .table-row:hover {
+    background: transparent;
+  }
+
+  .no-effects .table-shell {
+    backdrop-filter: none;
+    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
   }
 
   .tag-pill {
@@ -379,9 +425,13 @@
   .nav-shell,
   .surface-card,
   .hero-frame,
-  .table-shell,
   .footer-shell {
     backdrop-filter: blur(10px);
+  }
+
+  .table-shell {
+    backdrop-filter: none;
+    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
   }
 
   .icon-button {

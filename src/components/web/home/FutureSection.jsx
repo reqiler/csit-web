@@ -68,7 +68,7 @@ export default function SpecializedFields() {
         </div>
 
         {/* GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 mx-8 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {fields.map((f, i) => (
             <div
               key={i}

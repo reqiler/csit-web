@@ -1,4 +1,100 @@
+import useLanguage from "../../common/useLanguage";
+
+const copy = {
+    th: {
+        title: "วิทยาศาสตรบัณฑิต สาขาวิชาวิทยาการคอมพิวเตอร์",
+        subtitle: "หลักสูตรปรับปรุง พ.ศ. 2564",
+        overview: {
+            levelLabel: "ระดับการศึกษา",
+            levelValue: "ปริญญาตรี (โครงการปกติ)",
+            facultyLabel: "คณะ",
+            facultyValue: "คณะวิทยาศาสตร์",
+            yearsLabel: "จำนวนปีที่ศึกษา",
+            yearsValue: "4 ปี",
+            creditsLabel: "จำนวนหน่วยกิตรวม",
+            creditsValue: "130 หน่วยกิต",
+            revisedLabel: "ปรับปรุงหลักสูตร",
+            revisedValue: "พ.ศ. 2564",
+        },
+        section1: "1. หมวดวิชาเฉพาะ (ไม่น้อยกว่า 95 หน่วยกิต)",
+        section1_1: "1.1 วิชาแกน (ไม่น้อยกว่า 27 หน่วยกิต)",
+        section1_1_1: "1.1.1 แผนการเรียน (เลือก 1 แผน)",
+        section1_1_1_note:
+            "เลือกแผนใดแผนหนึ่ง: แผนสหกิจศึกษา หรือ แผนโครงงานนักศึกษา",
+        section1_2: "1.2 วิชาเฉพาะด้าน (ไม่น้อยกว่า 47 หน่วยกิต)",
+        group1_2_1: "1.2.1 กลุ่มประเด็นด้านองค์การและระบบสารสนเทศ",
+        group1_2_2: "1.2.2 กลุ่มเทคโนโลยีเพื่อการประยุกต์",
+        group1_2_3: "1.2.3 กลุ่มเทคโนโลยีและวิธีการทางซอฟต์แวร์",
+        group1_2_4: "1.2.4 กลุ่มโครงสร้างพื้นฐานของระบบ",
+        group1_2_5: "1.2.5 กลุ่มฮาร์ดแวร์และสถาปัตยกรรมคอมพิวเตอร์",
+        section1_3: "1.3 วิชาเอกเลือก (ไม่น้อยกว่า 18 หน่วยกิต)",
+        section1_3_note:
+            "เลือก 1 กลุ่มวิชา ไม่น้อยกว่า 12 หน่วยกิต และเลือกจากรายวิชาที่กำหนดเพิ่มเติมไม่น้อยกว่า 6 หน่วยกิต",
+        track1: "1) กลุ่มเครือข่ายคอมพิวเตอร์และความมั่นคงไซเบอร์",
+        track2: "2) กลุ่มวิธีการทางซอฟต์แวร์และการพัฒนาเชิงประยุกต์",
+        track3: "3) กลุ่มวิทยาการข้อมูล",
+        section1_3_2:
+            "1.3.2 เลือกจากรายวิชาที่กำหนด (ไม่น้อยกว่า 6 หน่วยกิต)",
+        section1_4: "1.4 วิชาประสบการณ์ภาคสนาม (ไม่น้อยกว่า 3 หน่วยกิต)",
+        section2: "2. หมวดวิชาศึกษาทั่วไป",
+        section2_note: "ไม่น้อยกว่า 30 หน่วยกิต",
+        section3: "3. หมวดวิชาเลือกเสรี",
+        section3_note: "ไม่น้อยกว่า 6 หน่วยกิต",
+        table: {
+            code: "รหัสวิชา",
+            name: "รายวิชา",
+            credits: "หน่วยกิต",
+        },
+    },
+    en: {
+        title: "Bachelor of Science in Computer Science",
+        subtitle: "Revised Curriculum 2021",
+        overview: {
+            levelLabel: "Level",
+            levelValue: "Bachelor's degree (Regular program)",
+            facultyLabel: "Faculty",
+            facultyValue: "Faculty of Science",
+            yearsLabel: "Study duration",
+            yearsValue: "4 years",
+            creditsLabel: "Total credits",
+            creditsValue: "130 credits",
+            revisedLabel: "Curriculum revised",
+            revisedValue: "2021",
+        },
+        section1: "1. Major Courses (at least 95 credits)",
+        section1_1: "1.1 Core Courses (at least 27 credits)",
+        section1_1_1: "1.1.1 Study Plan (choose 1 plan)",
+        section1_1_1_note:
+            "Choose either Cooperative Education plan or Senior Project plan",
+        section1_2: "1.2 Specialized Courses (at least 47 credits)",
+        group1_2_1: "1.2.1 Organization and Information Systems",
+        group1_2_2: "1.2.2 Applied Technology",
+        group1_2_3: "1.2.3 Software Technology and Methods",
+        group1_2_4: "1.2.4 System Infrastructure",
+        group1_2_5: "1.2.5 Hardware and Computer Architecture",
+        section1_3: "1.3 Major Electives (at least 18 credits)",
+        section1_3_note:
+            "Choose 1 track with at least 12 credits, plus at least 6 additional credits from specified courses",
+        track1: "1) Computer Networks and Cybersecurity",
+        track2: "2) Software Methods and Applied Development",
+        track3: "3) Data Science",
+        section1_3_2: "1.3.2 Additional courses (at least 6 credits)",
+        section1_4: "1.4 Field Experience (at least 3 credits)",
+        section2: "2. General Education",
+        section2_note: "At least 30 credits",
+        section3: "3. Free Electives",
+        section3_note: "At least 6 credits",
+        table: {
+            code: "Course Code",
+            name: "Course Title",
+            credits: "Credits",
+        },
+    },
+};
+
 export default function ProgramCS() {
+    const lang = useLanguage();
+    const t = copy[lang] || copy.th;
     return (
         <section className="bg-white py-20">
             <div className="max-w-7xl mx-auto px-6 space-y-8">
@@ -6,30 +102,30 @@ export default function ProgramCS() {
                 {/* ===== TITLE ===== */}
                 <div>
                     <h1 className="text-3xl font-bold text-slate-900 mb-2">
-                        วิทยาศาสตรบัณฑิต สาขาวิชาวิทยาการคอมพิวเตอร์
+                        {t.title}
                     </h1>
                     <p className="text-slate-600">
-                        Bachelor of Science in Computer Science (Revised Curriculum 2021)
+                        {t.subtitle}
                     </p>
                 </div>
 
                 {/* ===== OVERVIEW ===== */}
                 <div className="grid md:grid-cols-2 gap-8 text-sm text-slate-700">
                     <ul className="space-y-2">
-                        <li><strong>ระดับการศึกษา:</strong> ปริญญาตรี (โครงการปกติ)</li>
-                        <li><strong>คณะ:</strong> คณะวิทยาศาสตร์</li>
-                        <li><strong>จำนวนปีที่ศึกษา:</strong> 4 ปี</li>
+                        <li><strong>{t.overview.levelLabel}:</strong> {t.overview.levelValue}</li>
+                        <li><strong>{t.overview.facultyLabel}:</strong> {t.overview.facultyValue}</li>
+                        <li><strong>{t.overview.yearsLabel}:</strong> {t.overview.yearsValue}</li>
                     </ul>
                     <ul className="space-y-2">
-                        <li><strong>จำนวนหน่วยกิตรวม:</strong> 130 หน่วยกิต</li>
-                        <li><strong>ปรับปรุงหลักสูตร:</strong> พ.ศ. 2564</li>
+                        <li><strong>{t.overview.creditsLabel}:</strong> {t.overview.creditsValue}</li>
+                        <li><strong>{t.overview.revisedLabel}:</strong> {t.overview.revisedValue}</li>
                     </ul>
                 </div>
 
                 {/* ===== 1. หมวดวิชาเฉพาะ ===== */}
-                <Section title="1. หมวดวิชาเฉพาะ (ไม่น้อยกว่า 95 หน่วยกิต)">
+                <Section title={t.section1}>
 
-                    <SubSection title="1.1 วิชาแกน (ไม่น้อยกว่า 27 หน่วยกิต)">
+                    <SubSection title={t.section1_1}>
                         <CourseTable courses={[
                             ["CS40102", "คณิตศาสตร์ดิสครีต", "Discrete Mathematics", "3(3-0-6)"],
                             ["CS40205", "ระเบียบวิธีเชิงตัวเลขสำหรับวิทยาการคอมพิวเตอร์", "Numerical Methods for Computer Science", "3(3-0-6)"],
@@ -41,9 +137,9 @@ export default function ProgramCS() {
                         ]} />
                     </SubSection>
 
-                    <SubSection title="1.1.1 แผนการเรียน (เลือก 1 แผน)">
+                    <SubSection title={t.section1_1_1}>
                         <p className="text-slate-600 mb-4">
-                            เลือกแผนใดแผนหนึ่ง: แผนสหกิจศึกษา หรือ แผนโครงงานนักศึกษา
+                            {t.section1_1_1_note}
                         </p>
 
                         <CourseTable courses={[
@@ -53,10 +149,10 @@ export default function ProgramCS() {
                         ]} />
                     </SubSection>
 
-                    <SubSection title="1.2 วิชาเฉพาะด้าน (ไม่น้อยกว่า 47 หน่วยกิต)">
+                    <SubSection title={t.section1_2}>
 
                         {/* Group 1.2.1 */}
-                        <h4 className="font-semibold text-slate-800">1.2.1 กลุ่มประเด็นด้านองค์การและระบบสารสนเทศ</h4>
+                        <h4 className="font-semibold text-slate-800">{t.group1_2_1}</h4>
                         <CourseTable courses={[
                             ["CS18402", "การเตรียมฝึกประสบการณ์ภาคสนาม", "Preparation for Field Experiences", "1(1-2-3)"],
                             ["CS19301", "การวิเคราะห์และออกแบบระบบ", "System Analysis and Design", "3(2-2-5)"],
@@ -66,7 +162,7 @@ export default function ProgramCS() {
                         ]} />
 
                         {/* Group 1.2.2 */}
-                        <h4 className="font-semibold text-slate-800">1.2.2 กลุ่มเทคโนโลยีเพื่อการประยุกต์</h4>
+                        <h4 className="font-semibold text-slate-800">{t.group1_2_2}</h4>
                         <CourseTable courses={[
                             ["CS23304", "พื้นฐานความมั่นคงของคอมพิวเตอร์และเครือข่าย", "Fundamental of Computer and Network Security", "3(2-2-5)"],
                             ["CS27301", "ปัญญาประดิษฐ์", "Artificial Intelligence", "3(2-2-5)"],
@@ -74,7 +170,7 @@ export default function ProgramCS() {
                         ]} />
 
                         {/* Group 1.2.3 */}
-                        <h4 className="font-semibold text-slate-800">1.2.3 กลุ่มเทคโนโลยีและวิธีการทางซอฟต์แวร์</h4>
+                        <h4 className="font-semibold text-slate-800">{t.group1_2_3}</h4>
                         <CourseTable courses={[
                             ["CS34101", "การเขียนโปรแกรมคอมพิวเตอร์", "Computer Programming", "3(2-2-5)"],
                             ["CS34102", "การเขียนโปรแกรมเชิงวัตถุ", "Object-oriented Programming", "3(2-2-5)"],
@@ -83,7 +179,7 @@ export default function ProgramCS() {
                         ]} />
 
                         {/* Group 1.2.4 */}
-                        <h4 className="font-semibold text-slate-800">1.2.4 กลุ่มโครงสร้างพื้นฐานของระบบ</h4>
+                        <h4 className="font-semibold text-slate-800">{t.group1_2_4}</h4>
                         <CourseTable courses={[
                             ["CS40101", "วิทยาการคอมพิวเตอร์พื้นฐาน", "Fundamental of Computer Science", "3(2-2-5)"],
                             ["CS41203", "โครงสร้างข้อมูลและขั้นตอนวิธี", "Data Structure and Algorithms", "3(2-2-5)"],
@@ -92,7 +188,7 @@ export default function ProgramCS() {
                         ]} />
 
                         {/* Group 1.2.5 */}
-                        <h4 className="font-semibold text-slate-800">1.2.5 กลุ่มฮาร์ดแวร์และสถาปัตยกรรมคอมพิวเตอร์</h4>
+                        <h4 className="font-semibold text-slate-800">{t.group1_2_5}</h4>
                         <CourseTable courses={[
                             ["CS52101", "องค์ประกอบและสถาปัตยกรรมคอมพิวเตอร์", "Computer Organization and Architecture", "3(2-2-5)"],
                         ]} />
@@ -100,17 +196,17 @@ export default function ProgramCS() {
                     </SubSection>
 
                     {/* ===== 1.3 วิชาเอกเลือก ===== */}
-                    <SubSection title="1.3 วิชาเอกเลือก (ไม่น้อยกว่า 18 หน่วยกิต)">
+                    <SubSection title={t.section1_3}>
 
                         <p className="text-slate-600 mb-6">
-                            เลือก 1 กลุ่มวิชา ไม่น้อยกว่า 12 หน่วยกิต และเลือกจากรายวิชาที่กำหนดเพิ่มเติมไม่น้อยกว่า 6 หน่วยกิต
+                            {t.section1_3_note}
                         </p>
 
                         {/* ================= 1.3.1 เลือก 1 กลุ่ม ================= */}
 
                         {/* กลุ่มเครือข่ายฯ */}
                         <h4 className="mt-10 mb-4 font-semibold text-slate-800">
-                            1) กลุ่มเครือข่ายคอมพิวเตอร์และความมั่นคงไซเบอร์
+                            {t.track1}
                         </h4>
                         <CourseTable courses={[
                             ["CS23306", "เครือข่ายไร้สาย", "Wireless Network", "3(2-2-5)"],
@@ -121,7 +217,7 @@ export default function ProgramCS() {
 
                         {/* กลุ่มซอฟต์แวร์ */}
                         <h4 className="mt-14 mb-4 font-semibold text-slate-800">
-                            2) กลุ่มวิธีการทางซอฟต์แวร์และการพัฒนาเชิงประยุกต์
+                            {t.track2}
                         </h4>
                         <CourseTable courses={[
                             ["CS24306", "การพัฒนาโปรแกรมประยุกต์บนเว็บขั้นสูง", "Advanced Web Application Development", "3(2-2-5)"],
@@ -132,7 +228,7 @@ export default function ProgramCS() {
 
                         {/* กลุ่มวิทยาการข้อมูล */}
                         <h4 className="mt-14 mb-4 font-semibold text-slate-800">
-                            3) กลุ่มวิทยาการข้อมูล
+                            {t.track3}
                         </h4>
                         <CourseTable courses={[
                             ["CS26301", "พื้นฐานวิทยาการข้อมูล", "Foundations of Data Science", "3(2-2-5)"],
@@ -144,7 +240,7 @@ export default function ProgramCS() {
                         {/* ================= 1.3.2 เลือกเพิ่มเติม ================= */}
 
                         <h4 className="mt-20 mb-4 font-semibold text-slate-800">
-                            1.3.2 เลือกจากรายวิชาที่กำหนด (ไม่น้อยกว่า 6 หน่วยกิต)
+                            {t.section1_3_2}
                         </h4>
 
                         <CourseTable courses={[
@@ -181,7 +277,7 @@ export default function ProgramCS() {
                     </SubSection>
 
                     {/* ===== 1.4 วิชาประสบการณ์ภาคสนาม ===== */}
-                    <SubSection title="1.4 วิชาประสบการณ์ภาคสนาม (ไม่น้อยกว่า 3 หน่วยกิต)">
+                    <SubSection title={t.section1_4}>
 
                         <CourseTable courses={[
                             [
@@ -196,12 +292,12 @@ export default function ProgramCS() {
                 </Section>
 
                 {/* ===== 2 & 3 ===== */}
-                <Section title="2. หมวดวิชาศึกษาทั่วไป">
-                    <p className="text-slate-600">ไม่น้อยกว่า 30 หน่วยกิต</p>
+                <Section title={t.section2}>
+                    <p className="text-slate-600">{t.section2_note}</p>
                 </Section>
 
-                <Section title="3. หมวดวิชาเลือกเสรี">
-                    <p className="text-slate-600">ไม่น้อยกว่า 6 หน่วยกิต</p>
+                <Section title={t.section3}>
+                    <p className="text-slate-600">{t.section3_note}</p>
                 </Section>
 
             </div>
@@ -233,14 +329,17 @@ function SubSection({ title, children }) {
 }
 
 function CourseTable({ courses }) {
+    const lang = useLanguage();
+    const t = copy[lang] || copy.th;
+
     return (
         <div className="overflow-x-auto border rounded-xl mb-8">
             <table className="w-full text-sm">
                 <thead className="bg-slate-100">
                     <tr>
-                        <th className="px-4 py-3 text-left">รหัสวิชา</th>
-                        <th className="px-4 py-3 text-left">รายวิชา</th>
-                        <th className="px-4 py-3 text-left">หน่วยกิต</th>
+                        <th className="px-4 py-3 text-left">{t.table.code}</th>
+                        <th className="px-4 py-3 text-left">{t.table.name}</th>
+                        <th className="px-4 py-3 text-left">{t.table.credits}</th>
                     </tr>
                 </thead>
                 <tbody className="divide-y">

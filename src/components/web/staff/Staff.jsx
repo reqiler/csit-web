@@ -1,3 +1,24 @@
+import useLanguage from "../../common/useLanguage";
+
+const copy = {
+    th: {
+        title: "อาจารย์ประจำสาขาวิชา",
+        subtitle: "คณาจารย์ผู้มีความเชี่ยวชาญด้านการเรียนการสอนและการวิจัย",
+        email: "อีเมล",
+        research: "งานวิจัย",
+        noResearch: "ยังไม่มีข้อมูลด้านงานวิจัย",
+        website: "เว็บไซต์ส่วนตัว",
+    },
+    en: {
+        title: "Department Faculty",
+        subtitle: "Faculty with expertise in teaching and research",
+        email: "Email",
+        research: "Research Interests",
+        noResearch: "No research information available",
+        website: "Personal Website",
+    },
+};
+
 const staffData = [
     {
         nameTH: "อาจารย์คุณาวุฒิ บุญกว้าง",
@@ -38,7 +59,7 @@ const staffData = [
         email: "piyawad.k@udru.ac.th",
         research:
             "Computer Network, Network & Cyber Security, Future Network",
-        website: "",
+        website: "https://piyk.github.io/",
         img: "/img/staff/5.jpg",
     },
     {
@@ -54,7 +75,7 @@ const staffData = [
         nameEN: "Natthawan Phoonson",
         email: "natthawan.ph@udru.ac.th",
         research: "Augmented Reality, Web API, GIS",
-        website: "",
+        website: "https://www.facebook.com/jubnatthawan.phoonson",
         img: "/img/staff/7.jpg",
     },
     {
@@ -93,15 +114,18 @@ const staffData = [
 ];
 
 export default function StaffPage() {
+    const lang = useLanguage();
+    const t = copy[lang] || copy.th;
+
     return (
         <section className="max-w-7xl mx-auto px-4 py-20 font-sarabun">
             {/* HEADER */}
             <div className="text-center mb-16">
                 <h2 className="text-4xl font-semibold text-gray-800">
-                    อาจารย์ประจำสาขาวิชา
+                    {t.title}
                 </h2>
                 <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-                    คณาจารย์ผู้มีความเชี่ยวชาญด้านการเรียนการสอนและการวิจัย
+                    {t.subtitle}
                 </p>
             </div>
 
@@ -117,6 +141,8 @@ export default function StaffPage() {
 
 
 function StaffCard({ staff }) {
+  const lang = useLanguage();
+  const t = copy[lang] || copy.th;
   const { nameTH, nameEN, email, research, website, img } = staff;
 
   return (
@@ -159,7 +185,7 @@ function StaffCard({ staff }) {
         <div className="space-y-4 text-sm text-gray-700 flex-1 text-left">
           {email && (
             <p>
-              <span className="font-medium">Email:</span>{" "}
+              <span className="font-medium">{t.email}:</span>{" "}
               <a
                 href={`mailto:${email}`}
                 className="text-blue-600 hover:underline break-all"
@@ -172,7 +198,7 @@ function StaffCard({ staff }) {
           {research ? (
             <div>
               <p className="font-medium mb-1 text-gray-800">
-                Research Interests
+                {t.research}
               </p>
               <p className="text-gray-600 leading-relaxed line-clamp-3">
                 {research}
@@ -180,7 +206,7 @@ function StaffCard({ staff }) {
             </div>
           ) : (
             <p className="italic text-gray-400">
-              ยังไม่มีข้อมูลด้านงานวิจัย
+              {t.noResearch}
             </p>
           )}
         </div>
@@ -195,10 +221,9 @@ function StaffCard({ staff }) {
               className="
                 inline-flex items-center gap-1
                 text-blue-600 font-medium
-                hover:underline
               "
             >
-              Personal Website
+              {t.website}
               <span className="transition-transform group-hover:translate-x-1">
                 →
               </span>

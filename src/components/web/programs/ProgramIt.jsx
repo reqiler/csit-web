@@ -1,4 +1,92 @@
+import useLanguage from "../../common/useLanguage";
+
+const copy = {
+    th: {
+        title: "วิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ",
+        subtitle: "หลักสูตรปรับปรุง พ.ศ. 2569",
+        overview: {
+            levelLabel: "ระดับการศึกษา",
+            levelValue: "ปริญญาตรี (โครงการปกติ)",
+            facultyLabel: "คณะ",
+            facultyValue: "คณะวิทยาศาสตร์",
+            yearsLabel: "จำนวนปีที่ศึกษา",
+            yearsValue: "4 ปี",
+            creditsLabel: "จำนวนหน่วยกิตรวม",
+            creditsValue: "121 หน่วยกิต",
+            revisedLabel: "ปรับปรุงหลักสูตร",
+            revisedValue: "พ.ศ. 2569",
+        },
+        section1: "1. หมวดวิชาเฉพาะ (ไม่น้อยกว่า 91 หน่วยกิต)",
+        section1_1: "1.1 วิชาแกน (ไม่น้อยกว่า 61 หน่วยกิต)",
+        section1_1_1: "1.1.1 แผนการเรียน (เลือก 1 แผน)",
+        section1_1_1_note:
+            "เลือกแผนใดแผนหนึ่ง: แผนสหกิจศึกษา หรือ แผนโครงงานนักศึกษา",
+        section1_2: "1.2 วิชาเอกเลือก (ไม่น้อยกว่า 21 หน่วยกิต)",
+        section1_2_note:
+            "เลือก 1 กลุ่มวิชา ไม่น้อยกว่า 12 หน่วยกิต และเลือกจากรายวิชาที่กำหนดเพิ่มเติมไม่น้อยกว่า 6 หน่วยกิต",
+        track1: "1) กลุ่มเทคโนโลยีธุรกิจดิจิทัล",
+        track2: "2) กลุ่มการพัฒนาซอฟต์แวร์แบบฟูลสแต็ก",
+        track3: "3) กลุ่มวิทยาการข้อมูลเชิงประยุกต์",
+        track4: "4) กลุ่มความมั่นคงปลอดภัยไซเบอร์",
+        track5: "5) กลุ่มการออกแบบและการจัดการซอฟต์แวร์",
+        track6: "6) กลุ่มการทดสอบระบบซอฟต์แวร์",
+        section1_3_2:
+            "1.3.2 เลือกจากรายวิชาที่กำหนด (ไม่น้อยกว่า 9 หน่วยกิต)",
+        section2: "2. หมวดวิชาศึกษาทั่วไป",
+        section2_note: "ไม่น้อยกว่า 24 หน่วยกิต",
+        section3: "3. หมวดวิชาเลือกเสรี",
+        section3_note: "ไม่น้อยกว่า 6 หน่วยกิต",
+        table: {
+            code: "รหัสวิชา",
+            name: "รายวิชา",
+            credits: "หน่วยกิต",
+        },
+    },
+    en: {
+        title: "Bachelor of Science in Information Technology",
+        subtitle: "Revised Curriculum 2026",
+        overview: {
+            levelLabel: "Level",
+            levelValue: "Bachelor's degree (Regular program)",
+            facultyLabel: "Faculty",
+            facultyValue: "Faculty of Science",
+            yearsLabel: "Study duration",
+            yearsValue: "4 years",
+            creditsLabel: "Total credits",
+            creditsValue: "121 credits",
+            revisedLabel: "Curriculum revised",
+            revisedValue: "2026",
+        },
+        section1: "1. Major Courses (at least 91 credits)",
+        section1_1: "1.1 Core Courses (at least 61 credits)",
+        section1_1_1: "1.1.1 Study Plan (choose 1 plan)",
+        section1_1_1_note:
+            "Choose either Cooperative Education plan or Senior Project plan",
+        section1_2: "1.2 Major Electives (at least 21 credits)",
+        section1_2_note:
+            "Choose 1 track with at least 12 credits, plus at least 6 additional credits from specified courses",
+        track1: "1) Digital Business Technology",
+        track2: "2) Full-Stack Software Development",
+        track3: "3) Applied Data Science",
+        track4: "4) Cybersecurity",
+        track5: "5) Software Design and Management",
+        track6: "6) Software Testing",
+        section1_3_2: "1.3.2 Additional courses (at least 9 credits)",
+        section2: "2. General Education",
+        section2_note: "At least 24 credits",
+        section3: "3. Free Electives",
+        section3_note: "At least 6 credits",
+        table: {
+            code: "Course Code",
+            name: "Course Title",
+            credits: "Credits",
+        },
+    },
+};
+
 export default function ProgramIT() {
+    const lang = useLanguage();
+    const t = copy[lang] || copy.th;
     return (
         <section className="bg-white py-20">
             <div className="max-w-7xl mx-auto px-6 space-y-8">
@@ -6,30 +94,30 @@ export default function ProgramIT() {
                 {/* ===== TITLE ===== */}
                 <div>
                     <h1 className="text-3xl font-bold text-slate-900 mb-2">
-                        วิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ
+                        {t.title}
                     </h1>
                     <p className="text-slate-600">
-                        Bachelor of Science in Information Technology (Revised Curriculum 2026)
+                        {t.subtitle}
                     </p>
                 </div>
 
                 {/* ===== OVERVIEW ===== */}
                 <div className="grid md:grid-cols-2 gap-8 text-sm text-slate-700">
                     <ul className="space-y-2">
-                        <li><strong>ระดับการศึกษา:</strong> ปริญญาตรี (โครงการปกติ)</li>
-                        <li><strong>คณะ:</strong> คณะวิทยาศาสตร์</li>
-                        <li><strong>จำนวนปีที่ศึกษา:</strong> 4 ปี</li>
+                        <li><strong>{t.overview.levelLabel}:</strong> {t.overview.levelValue}</li>
+                        <li><strong>{t.overview.facultyLabel}:</strong> {t.overview.facultyValue}</li>
+                        <li><strong>{t.overview.yearsLabel}:</strong> {t.overview.yearsValue}</li>
                     </ul>
                     <ul className="space-y-2">
-                        <li><strong>จำนวนหน่วยกิตรวม:</strong> 121 หน่วยกิต</li>
-                        <li><strong>ปรับปรุงหลักสูตร:</strong> พ.ศ. 2569</li>
+                        <li><strong>{t.overview.creditsLabel}:</strong> {t.overview.creditsValue}</li>
+                        <li><strong>{t.overview.revisedLabel}:</strong> {t.overview.revisedValue}</li>
                     </ul>
                 </div>
 
                 {/* ===== 1. หมวดวิชาเฉพาะ ===== */}
-                <Section title="1. หมวดวิชาเฉพาะ (ไม่น้อยกว่า 91 หน่วยกิต)">
+                <Section title={t.section1}>
 
-                    <SubSection title="1.1 วิชาแกน (ไม่น้อยกว่า 61 หน่วยกิต)">
+                    <SubSection title={t.section1_1}>
                         <CourseTable
                             courses={[
                                 ["EN56205", "ภาษาอังกฤษเพื่องานอาชีพ", "English for Occupational Purposes", "3(3-0-6)"],
@@ -60,9 +148,9 @@ export default function ProgramIT() {
                         />
                     </SubSection>
 
-                    <SubSection title="1.1.1 แผนการเรียน (เลือก 1 แผน)">
+                    <SubSection title={t.section1_1_1}>
                         <p className="text-slate-600 mb-4">
-                            เลือกแผนใดแผนหนึ่ง: แผนสหกิจศึกษา หรือ แผนโครงงานนักศึกษา
+                            {t.section1_1_1_note}
                         </p>
 
                         <CourseTable
@@ -79,15 +167,15 @@ export default function ProgramIT() {
                     </SubSection>
 
                     {/* ===== 1.2 วิชาเอกเลือก ===== */}
-                    <SubSection title="1.2 วิชาเอกเลือก (ไม่น้อยกว่า 21 หน่วยกิต)">
+                    <SubSection title={t.section1_2}>
 
                         <p className="text-slate-600 mb-6">
-                            เลือก 1 กลุ่มวิชา ไม่น้อยกว่า 12 หน่วยกิต และเลือกจากรายวิชาที่กำหนดเพิ่มเติมไม่น้อยกว่า 6 หน่วยกิต
+                            {t.section1_2_note}
                         </p>
 
                         {/* 2.1.1 กลุ่มเทคโนโลยีธุรกิจดิจิทัล */}
                         <h4 className="mt-10 mb-4 font-semibold text-slate-800">
-                            1) กลุ่มเทคโนโลยีธุรกิจดิจิทัล
+                            {t.track1}
                         </h4>
                         <CourseTable courses={[
                             ["IT02301", "การตลาดดิจิทัลและพาณิชย์อิเล็กทรอนิกส์", "Digital Marketing and E-Commerce", "3(2-2-5)"],
@@ -98,7 +186,7 @@ export default function ProgramIT() {
 
                         {/* 2.1.2 กลุ่มการพัฒนาซอฟต์แวร์แบบฟูลสแต็ก */}
                         <h4 className="mt-14 mb-4 font-semibold text-slate-800">
-                            2) กลุ่มการพัฒนาซอฟต์แวร์แบบฟูลสแต็ก
+                            {t.track2}
                         </h4>
                         <CourseTable courses={[
                             ["IT02305", "สถาปัตยกรรมซอฟต์แวร์และการออกแบบระบบ", "Software Architecture and System Design", "3(2-2-5)"],
@@ -109,7 +197,7 @@ export default function ProgramIT() {
 
                         {/* 2.1.3 กลุ่มวิทยาการข้อมูลเชิงประยุกต์ */}
                         <h4 className="mt-14 mb-4 font-semibold text-slate-800">
-                            3) กลุ่มวิทยาการข้อมูลเชิงประยุกต์
+                            {t.track3}
                         </h4>
                         <CourseTable courses={[
                             ["IT02309", "วิศวกรรมข้อมูล", "Data Engineering", "3(2-2-5)"],
@@ -120,7 +208,7 @@ export default function ProgramIT() {
 
                         {/* 2.1.4 กลุ่มความมั่นคงปลอดภัยไซเบอร์ */}
                         <h4 className="mt-14 mb-4 font-semibold text-slate-800">
-                            4) กลุ่มความมั่นคงปลอดภัยไซเบอร์
+                            {t.track4}
                         </h4>
                         <CourseTable courses={[
                             ["IT02313", "ความมั่นคงปลอดภัยเว็บและโมบาย", "Web and Mobile Security", "3(2-2-5)"],
@@ -131,7 +219,7 @@ export default function ProgramIT() {
 
                         {/* 2.1.5 กลุ่มการออกแบบและการจัดการซอฟต์แวร์ */}
                         <h4 className="mt-14 mb-4 font-semibold text-slate-800">
-                            5) กลุ่มการออกแบบและการจัดการซอฟต์แวร์
+                            {t.track5}
                         </h4>
                         <CourseTable courses={[
                             ["IT02317", "วิศวกรรมความต้องการ", "Requirement Engineering", "3(2-2-5)"],
@@ -142,7 +230,7 @@ export default function ProgramIT() {
 
                         {/* 2.1.6 กลุ่มการทดสอบระบบซอฟต์แวร์ */}
                         <h4 className="mt-14 mb-4 font-semibold text-slate-800">
-                            6) กลุ่มการทดสอบระบบซอฟต์แวร์
+                            {t.track6}
                         </h4>
                         <CourseTable courses={[
                             ["IT02321", "คุณภาพซอฟต์แวร์และการทดสอบระบบ", "Software Quality Assurance and Testing", "3(2-2-5)"],
@@ -154,7 +242,7 @@ export default function ProgramIT() {
                         {/* ================= 1.3.2 เลือกเพิ่มเติม ================= */}
 
                         <h4 className="mt-20 mb-4 font-semibold text-slate-800">
-                            1.3.2 เลือกจากรายวิชาที่กำหนด (ไม่น้อยกว่า 9 หน่วยกิต)
+                            {t.section1_3_2}
                         </h4>
 
                         <CourseTable
@@ -191,12 +279,12 @@ export default function ProgramIT() {
                 </Section>
 
                 {/* ===== 2 & 3 ===== */}
-                <Section title="2. หมวดวิชาศึกษาทั่วไป">
-                    <p className="text-slate-600">ไม่น้อยกว่า 24 หน่วยกิต</p>
+                <Section title={t.section2}>
+                    <p className="text-slate-600">{t.section2_note}</p>
                 </Section>
 
-                <Section title="3. หมวดวิชาเลือกเสรี">
-                    <p className="text-slate-600">ไม่น้อยกว่า 6 หน่วยกิต</p>
+                <Section title={t.section3}>
+                    <p className="text-slate-600">{t.section3_note}</p>
                 </Section>
 
             </div>
@@ -228,14 +316,17 @@ function SubSection({ title, children }) {
 }
 
 function CourseTable({ courses }) {
+    const lang = useLanguage();
+    const t = copy[lang] || copy.th;
+
     return (
         <div className="overflow-x-auto border rounded-xl mb-8">
             <table className="w-full text-sm">
                 <thead className="bg-slate-100">
                     <tr>
-                        <th className="px-4 py-3 text-left">รหัสวิชา</th>
-                        <th className="px-4 py-3 text-left">รายวิชา</th>
-                        <th className="px-4 py-3 text-left">หน่วยกิต</th>
+                        <th className="px-4 py-3 text-left">{t.table.code}</th>
+                        <th className="px-4 py-3 text-left">{t.table.name}</th>
+                        <th className="px-4 py-3 text-left">{t.table.credits}</th>
                     </tr>
                 </thead>
                 <tbody className="divide-y">

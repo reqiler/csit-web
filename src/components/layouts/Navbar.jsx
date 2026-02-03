@@ -16,14 +16,20 @@ export default function Navbar() {
     const [lang, setLang] = useState("th");
     const t = menuText[lang];
 
-    const changeLang = (l) => {
+    const applyLang = (l) => {
         setLang(l);
         localStorage.setItem("lang", l);
+        document.documentElement.lang = l;
+        window.dispatchEvent(new CustomEvent("langchange", { detail: l }));
+    };
+
+    const changeLang = (l) => {
+        applyLang(l);
     };
 
     useEffect(() => {
         const saved = localStorage.getItem("lang");
-        if (saved) setLang(saved);
+        applyLang(saved || "th");
     }, []);
 
     const menus = [

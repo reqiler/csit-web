@@ -1,13 +1,52 @@
+import useLanguage from "../../common/useLanguage";
+
+const copy = {
+  th: {
+    title: "ข้อมูลการติดต่อ",
+    subtitle: "ช่องทางติดต่อและข้อมูลที่ตั้งของมหาวิทยาลัยราชภัฏอุดรธานี",
+    mapTitle: "แผนที่และพิกัด",
+    openMap: "เปิดใน Google Maps",
+    gps: "พิกัด GPS",
+    locationTitle: "สถานที่ตั้ง",
+    address: "ที่อยู่",
+    contact: "ติดต่อ",
+    email: "อีเมลภาควิชา",
+    quickTitle: "ติดต่อด่วน",
+    facebook: "ติดต่อผ่าน Facebook",
+    line: "ติดต่อผ่าน LINE",
+    emailButton: "ส่งอีเมล",
+  },
+  en: {
+    title: "Contact Information",
+    subtitle:
+      "Contact channels and location information for Udon Thani Rajabhat University",
+    mapTitle: "Map and Coordinates",
+    openMap: "Open in Google Maps",
+    gps: "GPS",
+    locationTitle: "Location",
+    address: "Address",
+    contact: "Contact",
+    email: "Department Email",
+    quickTitle: "Quick Contact",
+    facebook: "Contact Facebook",
+    line: "Contact LINE",
+    emailButton: "Send Email",
+  },
+};
+
 export default function ContactPage() {
+  const lang = useLanguage();
+  const t = copy[lang] || copy.th;
+
   return (
     <section className="max-w-7xl mx-auto px-4 py-20 font-sarabun">
       {/* HEADER */}
       <div className="text-center mb-16">
         <h2 className="text-4xl font-semibold text-gray-800">
-          ข้อมูลการติดต่อ
+          {t.title}
         </h2>
         <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-          ช่องทางติดต่อและข้อมูลที่ตั้งของมหาวิทยาลัยราชภัฏอุดรธานี
+          {t.subtitle}
         </p>
       </div>
 
@@ -17,7 +56,7 @@ export default function ContactPage() {
         <div className="bg-slate-50 rounded-2xl shadow-sm p-6 transition-all duration-300">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between mb-4">
             <h2 className="text-xl font-semibold text-gray-800">
-              แผนที่และพิกัด
+              {t.mapTitle}
             </h2>
             <a
               href="https://www.google.com/maps?q=17.4518949,102.9362667"
@@ -25,7 +64,7 @@ export default function ContactPage() {
               rel="noreferrer"
               className="text-sm text-blue-600 hover:underline"
             >
-              เปิดใน Google Maps
+              {t.openMap}
             </a>
           </div>
 
@@ -43,7 +82,7 @@ export default function ContactPage() {
           </div>
 
           <div className="mt-4 text-sm text-gray-600">
-            พิกัด GPS: 17.4518949, 102.9362667
+            {t.gps}: 17.4518949, 102.9362667
           </div>
         </div>
 
@@ -51,12 +90,12 @@ export default function ContactPage() {
         <div className="space-y-6">
           <div className="bg-slate-50 rounded-2xl shadow-sm p-6 space-y-4 transition-all duration-300">
             <h2 className="text-xl font-semibold text-gray-800">
-              สถานที่ตั้งและติดต่อ
+              {t.locationTitle}
             </h2>
 
             <div className="space-y-3 text-sm text-gray-600">
               <div>
-                <p className="font-semibold text-gray-800">ที่อยู่</p>
+                <p className="font-semibold text-gray-800">{t.address}</p>
                 <p>234 หมู่ 12 ต.สามพร้าว อ.เมือง จ.อุดรธานี 41000</p>
               </div>
 
@@ -86,7 +125,7 @@ export default function ContactPage() {
 
           <div className="bg-slate-50 rounded-2xl shadow-sm p-6 transition-all duration-300">
             <h3 className="text-lg font-semibold text-gray-800 mb-3">
-              ติดต่อด่วน
+              {t.quickTitle}
             </h3>
             <div className="grid gap-3">
               <a
@@ -95,7 +134,7 @@ export default function ContactPage() {
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-blue-600 text-white"
               >
-                ติดต่อผ่าน Facebook
+                {t.facebook}
               </a>
               <a
                 href="https://line.me/R/ti/p/@290rxktj"
@@ -103,13 +142,13 @@ export default function ContactPage() {
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-emerald-600 text-white"
               >
-                ติดต่อผ่าน LINE
+                {t.line}
               </a>
               <a
                 href="mailto:csit@udru.ac.th"
                 className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-white text-blue-700 border border-blue-200"
               >
-                ส่งอีเมล
+                {t.emailButton}
               </a>
             </div>
           </div>

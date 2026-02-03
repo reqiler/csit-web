@@ -185,7 +185,7 @@ function StaffCard({ staff }) {
         <div className="space-y-4 text-sm text-gray-700 dark:text-slate-300 flex-1 text-left">
           {email && (
             <p>
-              <span className="font-medium">{t.email}:</span>{" "}
+              <span className="font-medium text-gray-800 dark:text-slate-100">{t.email}:</span>{" "}
               <a
                 href={`mailto:${email}`}
                 className="text-blue-600 dark:text-sky-400 hover:underline break-all"

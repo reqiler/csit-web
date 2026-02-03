@@ -74,18 +74,17 @@ export default function ProductsAndServices() {
   ];
 
   return (
-    <section className="bg-white py-20">
+    <section className="gradient-bg py-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* TITLE */}
-        <div className="mb-10">
-          <h2 className="mb-2">
+        <div className="text-center mb-16 animate-fade-in-down">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             ผลงานและบริการทางวิชาการ
-            <span className="block text-base font-normal text-slate-600">
-              Academic Works and Services
-            </span>
           </h2>
-
-          <p className="text-sm text-slate-600 max-w-3xl leading-relaxed">
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            Academic Works and Services
+          </p>
+          <p className="text-base text-slate-500 max-w-4xl mx-auto leading-relaxed mt-4">
             โครงงานวิจัยและผลงานของนักศึกษาชั้นปีสุดท้าย
             ที่มุ่งเน้นการประยุกต์ใช้เทคโนโลยีสารสนเทศ
             เพื่อแก้ไขปัญหา พัฒนานวัตกรรม และตอบโจทย์ภาคสังคม
@@ -96,49 +95,47 @@ export default function ProductsAndServices() {
               society.
             </span>
           </p>
+          <div className="w-24 h-1 bg-linear-to-r from-blue-600 to-cyan-500 rounded-full mx-auto mt-6" />
         </div>
 
-        {/* TABLE */}
-        <div className="overflow-x-auto rounded-xl border">
-          <table className="w-full text-sm">
-            <thead className="bg-slate-100 text-slate-700">
-              <tr>
-                <th className="px-6 py-4 text-left">
-                  หัวข้อโครงงาน / Project Title
-                </th>
-                <th className="px-6 py-4 text-left">
-                  สาขา / Field
-                </th>
-                <th className="px-6 py-4 text-left whitespace-nowrap">
-                  วันที่ / Date
-                </th>
-              </tr>
-            </thead>
+        {/* PROJECTS GRID */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, i) => (
+            <div
+              key={i}
+              className="card card-hover animate-fade-in-up"
+              style={{ animationDelay: `${i * 0.1}s` }}
+            >
+              <div className="p-6">
+                <div className="mb-4">
+                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full mb-3">
+                    {project.fieldTH}
+                  </span>
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 leading-tight">
+                    {project.topicTH}
+                  </h3>
+                  <p className="text-sm text-slate-600 mb-4">
+                    {project.topicEN}
+                  </p>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-slate-500">
+                    {project.date}
+                  </span>
+                  <button className="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors">
+                    ดูเพิ่มเติม →
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
 
-            <tbody className="divide-y">
-              {projects.map((p, i) => (
-                <tr key={i} className="hover:bg-slate-50 transition">
-                  <td className="px-6 py-4 leading-relaxed">
-                    <div className="font-medium">{p.topicTH}</div>
-                    <div className="text-slate-500 text-xs mt-1">
-                      {p.topicEN}
-                    </div>
-                  </td>
-
-                  <td className="px-6 py-4">
-                    <div>{p.fieldTH}</div>
-                    <div className="text-slate-500 text-xs">
-                      {p.fieldEN}
-                    </div>
-                  </td>
-
-                  <td className="px-6 py-4 text-slate-500 whitespace-nowrap">
-                    {p.date}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        {/* Call to Action */}
+        <div className="text-center mt-12 animate-fade-in-up animation-delay-5">
+          <button className="btn-primary">
+            ดูผลงานทั้งหมด
+          </button>
         </div>
       </div>
     </section>

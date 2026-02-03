@@ -76,7 +76,7 @@ export default function Navbar() {
                     <a href="/" className="flex items-center gap-4 transition-all duration-300 hover:scale-[1.02]">
                         <img src="/favicon.png" alt="CS-IT" className="h-12 w-12 rounded-full shadow-md" />
                         <div className="flex flex-col">
-                            <span className="font-bold text-xl text-blue-900 tracking-tight">
+                            <span className="font-bold text-xl text-blue-800 tracking-tight">
                                 CSIT<span className="text-blue-600">UDRU</span>
                             </span>
                             <span className="text-xs text-gray-600 font-medium">
@@ -108,7 +108,7 @@ export default function Navbar() {
                                             className="
                                             flex items-center gap-2
                                             text-slate-700 font-medium
-                                            hover:text-blue-900
+                                            hover:text-blue-800
                                             transition
                                             "
                                         >
@@ -126,7 +126,7 @@ export default function Navbar() {
                                             className="
                                             flex items-center gap-2
                                             text-slate-700 font-medium
-                                            hover:text-blue-900
+                                            hover:text-blue-800
                                             transition
                                             "
                                         >
@@ -204,7 +204,7 @@ export default function Navbar() {
             >
                 {/* SIDEBAR HEADER */}
                 <div className="flex items-center justify-between px-6 h-20">
-                    <span className="font-semibold text-lg">เมนูหลัก</span>
+                    <span className="font-semibold text-lg">{t.menu}</span>
                     <button onClick={() => setSidebarOpen(false)}>
                         <X size={24} />
                     </button>
@@ -296,8 +296,8 @@ export default function Navbar() {
                             }}
                             className="w-full border rounded-xl px-3 py-2 text-sm"
                         >
-                            <option value="th">🇹🇭 ไทย</option>
-                            <option value="en">🇺🇸 English</option>
+                            <option value="th">ไทย</option>
+                            <option value="en">English</option>
                         </select>
                     </div>
                 </div>

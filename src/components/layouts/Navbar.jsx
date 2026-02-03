@@ -48,12 +48,7 @@ export default function Navbar() {
         localStorage.setItem("theme", nextTheme);
         document.documentElement.dataset.theme = nextTheme;
         document.documentElement.style.colorScheme = nextTheme === "dark" ? "dark" : "light";
-        const isHome = window.location.pathname === "/";
-        if (isHome) {
-            document.documentElement.classList.remove("dark");
-        } else {
-            document.documentElement.classList.toggle("dark", nextTheme === "dark");
-        }
+        document.documentElement.classList.toggle("dark", nextTheme === "dark");
         window.dispatchEvent(new CustomEvent("themechange", { detail: nextTheme }));
     };
 

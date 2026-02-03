@@ -221,7 +221,6 @@ function StaffCard({ staff }) {
               className="
                 inline-flex items-center gap-1
                 text-blue-600 dark:text-sky-400 font-medium
-                hover:underline
               "
             >
               {t.website}

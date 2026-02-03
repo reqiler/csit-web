@@ -15,14 +15,26 @@ export default function Navbar() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const closeTimer = useRef(null);
 
-    const [lang, setLang] = useState("th");
-    const [theme, setTheme] = useState("light");
+    const [lang, setLang] = useState(() => {
+        if (typeof document === "undefined") return "th";
+        const root = document.documentElement;
+        return root.dataset.lang || root.lang || localStorage.getItem("lang") || "th";
+    });
+    const [theme, setTheme] = useState(() => {
+        if (typeof document === "undefined") return "light";
+        const root = document.documentElement;
+        return root.classList.contains("dark")
+            ? "dark"
+            : root.dataset.theme || localStorage.getItem("theme") || "light";
+    });
     const t = menuText[lang];
 
     const applyLang = (l) => {
-        setLang(l);
+        if (!l) return;
+        setLang((prev) => (prev === l ? prev : l));
         localStorage.setItem("lang", l);
         document.documentElement.lang = l;
+        document.documentElement.dataset.lang = l;
         window.dispatchEvent(new CustomEvent("langchange", { detail: l }));
     };
 
@@ -31,17 +43,34 @@ export default function Navbar() {
     };
 
     const applyTheme = (nextTheme) => {
-        setTheme(nextTheme);
+        if (!nextTheme) return;
+        setTheme((prev) => (prev === nextTheme ? prev : nextTheme));
         localStorage.setItem("theme", nextTheme);
-        document.documentElement.classList.toggle("dark", nextTheme === "dark");
+        document.documentElement.dataset.theme = nextTheme;
+        document.documentElement.style.colorScheme = nextTheme === "dark" ? "dark" : "light";
+        const isHome = window.location.pathname === "/";
+        if (isHome) {
+            document.documentElement.classList.remove("dark");
+        } else {
+            document.documentElement.classList.toggle("dark", nextTheme === "dark");
+        }
         window.dispatchEvent(new CustomEvent("themechange", { detail: nextTheme }));
     };
 
     useEffect(() => {
-        const saved = localStorage.getItem("lang");
-        applyLang(saved || "th");
-        const savedTheme = localStorage.getItem("theme") || "light";
-        applyTheme(savedTheme);
+        const root = document.documentElement;
+        const savedLang =
+            localStorage.getItem("lang") || root.dataset.lang || root.lang || "th";
+        if (savedLang !== lang) applyLang(savedLang);
+
+        const savedTheme =
+            localStorage.getItem("theme") || root.dataset.theme || "light";
+        const shouldBeDark =
+            savedTheme === "dark" && window.location.pathname !== "/";
+        const hasDark = root.classList.contains("dark");
+        if (savedTheme !== theme || hasDark !== shouldBeDark || root.dataset.theme !== savedTheme) {
+            applyTheme(savedTheme);
+        }
     }, []);
 
     const menus = [
@@ -193,8 +222,8 @@ export default function Navbar() {
                         <button
                             onClick={() => applyTheme(theme === "dark" ? "light" : "dark")}
                             className="
-                                inline-flex items-center gap-2
-                                rounded-xl border-2 px-4 py-2.5 text-sm font-medium
+                                inline-flex items-center justify-center
+                                h-10 w-10 rounded-xl border-2 text-sm font-medium
                                 border-slate-300 hover:border-slate-400
                                 text-slate-700 hover:text-slate-900
                                 dark:border-slate-700 dark:hover:border-slate-500
@@ -203,23 +232,46 @@ export default function Navbar() {
                             "
                             aria-label="Toggle theme"
                         >
+                            <span className="sr-only">Toggle theme</span>
                             {theme === "dark" ? (
                                 <Moon size={16} className="text-slate-600 dark:text-slate-300" />
                             ) : (
                                 <Sun size={16} className="text-slate-600 dark:text-slate-300" />
                             )}
-                            <span>{theme === "dark" ? "Dark" : "Light"}</span>
                         </button>
                         <LanguageSwitcher value={lang} onChange={changeLang} />
                     </div>
 
                     {/* MOBILE BUTTON */}
-                    <button
-                        onClick={() => setSidebarOpen(true)}
-                        className="lg:hidden text-slate-800 dark:text-slate-100"
-                    >
-                        <Menu size={28} />
-                    </button>
+                    <div className="lg:hidden flex items-center gap-2">
+                        <button
+                            onClick={() => applyTheme(theme === "dark" ? "light" : "dark")}
+                            className="
+                                inline-flex items-center justify-center
+                                h-10 w-10 rounded-xl border-2 text-sm font-medium
+                                border-slate-300 hover:border-slate-400
+                                text-slate-700 hover:text-slate-900
+                                dark:border-slate-700 dark:hover:border-slate-500
+                                dark:text-slate-200 dark:hover:text-white
+                                transition-all duration-200
+                            "
+                            aria-label="Toggle theme"
+                        >
+                            <span className="sr-only">Toggle theme</span>
+                            {theme === "dark" ? (
+                                <Moon size={16} className="text-slate-600 dark:text-slate-300" />
+                            ) : (
+                                <Sun size={16} className="text-slate-600 dark:text-slate-300" />
+                            )}
+                        </button>
+                        <button
+                            onClick={() => setSidebarOpen(true)}
+                            className="text-slate-800 dark:text-slate-100"
+                            aria-label="Open menu"
+                        >
+                            <Menu size={28} />
+                        </button>
+                    </div>
                 </div>
             </header>
 
@@ -321,21 +373,6 @@ export default function Navbar() {
                             )}
                         </details>
                     ))}
-
-                    {/* THEME */}
-                    <div className="mt-6 px-4">
-                        <label className="block mb-2 text-xs text-slate-500 dark:text-slate-400">
-                            Theme
-                        </label>
-                        <select
-                            value={theme}
-                            onChange={(e) => applyTheme(e.target.value)}
-                            className="w-full border rounded-xl px-3 py-2 text-sm bg-white dark:bg-slate-900 dark:border-slate-700 dark:text-slate-100"
-                        >
-                            <option value="light">Light</option>
-                            <option value="dark">Dark</option>
-                        </select>
-                    </div>
 
                     {/* LANGUAGE */}
                     <div className="mt-6 px-4 pb-6">

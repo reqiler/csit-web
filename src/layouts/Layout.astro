@@ -7,24 +7,32 @@ import Footer from "../components/layouts/Footer.jsx";
 <!doctype html>
 <html lang="th">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!-- <link rel="icon" href="/favicon.png" /> -->
-    <title>สาขาวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ | UDRU</title>
     <script is:inline>
       {`(() => {
   try {
     const root = document.documentElement;
     const isHome = window.location.pathname === "/";
-    const saved = localStorage.getItem("theme") || "light";
+    const savedTheme = localStorage.getItem("theme") || "light";
+    const savedLang = localStorage.getItem("lang") || "th";
+
+    root.lang = savedLang;
+    root.dataset.lang = savedLang;
+    root.dataset.theme = savedTheme;
+    root.style.colorScheme = savedTheme === "dark" ? "dark" : "light";
+    root.style.backgroundColor = savedTheme === "dark" ? "#020617" : "#ffffff";
+
     if (isHome) {
       root.classList.remove("dark");
     } else {
-      root.classList.toggle("dark", saved === "dark");
+      root.classList.toggle("dark", savedTheme === "dark");
     }
   } catch (_) {}
 })();`}
     </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- <link rel="icon" href="/favicon.png" /> -->
+    <title>สาขาวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ | UDRU</title>
   </head>
 
   <body class="min-h-screen bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">

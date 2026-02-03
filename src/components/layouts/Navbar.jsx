@@ -33,6 +33,7 @@ export default function Navbar() {
         if (!l) return;
         setLang((prev) => (prev === l ? prev : l));
         localStorage.setItem("lang", l);
+        document.cookie = `lang=${l}; path=/; max-age=31536000`;
         document.documentElement.lang = l;
         document.documentElement.dataset.lang = l;
         window.dispatchEvent(new CustomEvent("langchange", { detail: l }));
@@ -46,9 +47,14 @@ export default function Navbar() {
         if (!nextTheme) return;
         setTheme((prev) => (prev === nextTheme ? prev : nextTheme));
         localStorage.setItem("theme", nextTheme);
+        document.cookie = `theme=${nextTheme}; path=/; max-age=31536000`;
         document.documentElement.dataset.theme = nextTheme;
         document.documentElement.style.colorScheme = nextTheme === "dark" ? "dark" : "light";
-        document.documentElement.classList.toggle("dark", nextTheme === "dark");
+        const useDark = nextTheme === "dark";
+        const bg = useDark ? "#020617" : "#ffffff";
+        document.documentElement.style.setProperty("--app-bg", bg);
+        document.documentElement.style.backgroundColor = bg;
+        document.documentElement.classList.toggle("dark", useDark);
         window.dispatchEvent(new CustomEvent("themechange", { detail: nextTheme }));
     };
 
@@ -60,8 +66,7 @@ export default function Navbar() {
 
         const savedTheme =
             localStorage.getItem("theme") || root.dataset.theme || "light";
-        const shouldBeDark =
-            savedTheme === "dark" && window.location.pathname !== "/";
+        const shouldBeDark = savedTheme === "dark";
         const hasDark = root.classList.contains("dark");
         if (savedTheme !== theme || hasDark !== shouldBeDark || root.dataset.theme !== savedTheme) {
             applyTheme(savedTheme);

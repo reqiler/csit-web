@@ -18,11 +18,19 @@
             "Sarabun",
             system-ui,
             sans-serif;
+        background-color: var(--app-bg, #ffffff);
     }
 
     body {
-        @apply bg-white text-slate-800 antialiased;
+        @apply text-slate-800 antialiased;
+        background-color: var(--app-bg, #ffffff);
     }
+}
+
+html.theme-preload *,
+html.theme-preload *::before,
+html.theme-preload *::after {
+    transition: none !important;
 }
 
 @layer base {

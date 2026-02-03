@@ -2,12 +2,59 @@
 import "../styles/global.css";
 import Navbar from "../components/layouts/Navbar.jsx";
 import Footer from "../components/layouts/Footer.jsx";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
-<html lang="th">
+<html lang="th" class="theme-preload">
   <head>
+    <script is:inline>
+      {`(() => {
+  const root = document.documentElement;
+  const release = () => root.classList.remove("theme-preload");
+  let savedTheme = "light";
+  let savedLang = "th";
+  const readCookie = (name) => {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(";").shift();
+    return null;
+  };
+  const cookieTheme = readCookie("theme");
+  const cookieLang = readCookie("lang");
+  if (cookieTheme) savedTheme = cookieTheme;
+  if (cookieLang) savedLang = cookieLang;
 
+  try {
+    savedTheme = localStorage.getItem("theme") || savedTheme;
+    savedLang = localStorage.getItem("lang") || savedLang;
+  } catch (_) {}
+
+  const useDark = savedTheme === "dark";
+  const bg = useDark ? "#020617" : "#ffffff";
+
+  root.lang = savedLang;
+  root.dataset.lang = savedLang;
+  root.dataset.theme = savedTheme;
+  root.style.colorScheme = useDark ? "dark" : "light";
+  root.style.setProperty("--app-bg", bg);
+  root.style.backgroundColor = bg;
+  root.classList.toggle("dark", useDark);
+
+  requestAnimationFrame(release);
+  setTimeout(release, 200);
+})();`}
+    </script>
+    <style is:inline>
+      {`
+        html, body { background-color: #ffffff; }
+        html.dark, html.dark body { background-color: #020617; color: #f8fafc; }
+        html.theme-preload *, html.theme-preload *::before, html.theme-preload *::after {
+          transition: none !important;
+        }
+      `}
+    </style>
+    <ViewTransitions />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <!-- <link rel="icon" href="/favicon.png" /> -->
@@ -15,9 +62,10 @@ import Footer from "../components/layouts/Footer.jsx";
   </head>
 
   <body
-    class="min-h-screen bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100"
+    class="min-h-screen text-slate-800 dark:text-slate-100"
+    style="background-color: var(--app-bg, #ffffff);"
   >
-    <Navbar client:idle />
+    <Navbar client:load />
     <slot />
     <Footer />
   </body>

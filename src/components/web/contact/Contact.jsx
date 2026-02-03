@@ -53,7 +53,7 @@ export default function ContactPage() {
       {/* CONTENT */}
       <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] gap-12">
         {/* MAP */}
-        <div className="bg-slate-50 dark:bg-slate-900/60 rounded-2xl shadow-sm ring-1 ring-slate-100 dark:ring-slate-800 p-6 transition-all duration-300">
+        <div className="bg-slate-50 dark:bg-slate-900/60 rounded-2xl shadow-sm ring-1 ring-slate-100 dark:ring-slate-800 p-6">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between mb-4">
             <h2 className="text-xl font-semibold text-gray-800 dark:text-slate-100">
               {t.mapTitle}
@@ -88,7 +88,7 @@ export default function ContactPage() {
 
         {/* CONTACT INFO */}
         <div className="space-y-6">
-          <div className="bg-slate-50 dark:bg-slate-900/60 rounded-2xl shadow-sm ring-1 ring-slate-100 dark:ring-slate-800 p-6 space-y-4 transition-all duration-300">
+          <div className="bg-slate-50 dark:bg-slate-900/60 rounded-2xl shadow-sm ring-1 ring-slate-100 dark:ring-slate-800 p-6 space-y-4">
             <h2 className="text-xl font-semibold text-gray-800 dark:text-slate-100">
               {t.locationTitle}
             </h2>
@@ -122,7 +122,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="bg-slate-50 dark:bg-slate-900/60 rounded-2xl shadow-sm ring-1 ring-slate-100 dark:ring-slate-800 p-6 transition-all duration-300">
+          <div className="bg-slate-50 dark:bg-slate-900/60 rounded-2xl shadow-sm ring-1 ring-slate-100 dark:ring-slate-800 p-6">
             <h3 className="text-lg font-semibold text-gray-800 dark:text-slate-100 mb-3">
               {t.quickTitle}
             </h3>
@@ -131,7 +131,7 @@ export default function ContactPage() {
                 href="https://www.facebook.com/csitudru"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-blue-600 dark:bg-sky-500 text-white transition-colors hover:bg-blue-700 dark:hover:bg-sky-600"
+                className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-blue-600 dark:bg-sky-500 text-white hover:bg-blue-700 dark:hover:bg-sky-600"
               >
                 {t.facebook}
               </a>
@@ -139,13 +139,13 @@ export default function ContactPage() {
                 href="https://line.me/R/ti/p/@290rxktj"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-emerald-600 text-white transition-colors hover:bg-emerald-700"
+                className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-emerald-600 text-white hover:bg-emerald-700"
               >
                 {t.line}
               </a>
               <a
                 href="mailto:csit@udru.ac.th"
-                className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-white dark:bg-slate-950 text-blue-700 dark:text-sky-400 border border-blue-200 dark:border-slate-700 transition-colors hover:bg-blue-50 dark:hover:bg-slate-900"
+                className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-white dark:bg-slate-950 text-blue-700 dark:text-sky-400 border border-blue-200 dark:border-slate-700 hover:bg-blue-50 dark:hover:bg-slate-900"
               >
                 {t.emailButton}
               </a>

@@ -150,7 +150,7 @@ function StaffCard({ staff }) {
       className="
         group bg-slate-50 dark:bg-slate-900/60 rounded-2xl w-full max-w-sm mx-auto
         shadow-sm ring-1 ring-slate-100 dark:ring-slate-800
-        transition-all duration-300 hover:-translate-y-1 hover:shadow-md
+        transition-transform transition-shadow duration-200 hover:-translate-y-1 hover:shadow-md
         flex flex-col
       "
     >

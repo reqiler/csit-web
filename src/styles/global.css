@@ -27,12 +27,6 @@
     }
 }
 
-html.theme-preload *,
-html.theme-preload *::before,
-html.theme-preload *::after {
-    transition: none !important;
-}
-
 @layer base {
     .font-sarabun {
         font-family:

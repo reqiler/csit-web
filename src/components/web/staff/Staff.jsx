@@ -122,8 +122,8 @@ function StaffCard({ staff }) {
   return (
     <div
       className="
-        group bg-white rounded-2xl max-w-sm mx-auto
-        shadow-sm hover:shadow-lg
+        group bg-slate-50 rounded-2xl w-[300px] sm:w-sm mx-auto
+        shadow-sm 
         transition-all duration-300
         flex flex-col
       "
@@ -134,16 +134,12 @@ function StaffCard({ staff }) {
           src={img}
           alt={nameTH}
           className="
-            w-1 h-1
+            w-40 h-40
+            shadow-sm
             rounded-full object-cover
             ring-4 ring-white
             shadow-md
           "
-          onError={(e) => {
-            e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(
-              nameTH
-            )}&background=1f2937&color=fff&size=256`;
-          }}
         />
       </div>
 
@@ -157,7 +153,7 @@ function StaffCard({ staff }) {
           {nameEN}
         </p>
 
-        <div className="my-4 h-px bg-gray-100" />
+        <div className="my-4 h-px bg-gray-200" />
 
         {/* INFO */}
         <div className="space-y-4 text-sm text-gray-700 flex-1 text-left">

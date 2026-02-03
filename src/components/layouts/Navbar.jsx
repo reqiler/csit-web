@@ -7,7 +7,6 @@ import {
 import LanguageSwitcher from "../common/LanguageSwitcher";
 
 import { menuText } from "../../assets/i18n/menu.js";
-import { logoText } from "../../assets/i18n/logo.js";
 
 export default function Navbar() {
     const [active, setActive] = useState(null);
@@ -15,7 +14,6 @@ export default function Navbar() {
     const closeTimer = useRef(null);
 
     const [lang, setLang] = useState("th");
-    const logo = logoText[lang];
     const t = menuText[lang];
 
     const changeLang = (l) => {
@@ -48,12 +46,8 @@ export default function Navbar() {
             ],
         },
         {
-            title: t.about,
-            children: [
-                { title: t.history, path: "/about/history" },
-                { title: t.vision, path: "/about/vision" },
-                { title: t.contact, path: "/about/contact" },
-            ],
+            title: t.contact,
+            path: "/contact"
         },
         {
             title: t.senior,
@@ -76,7 +70,7 @@ export default function Navbar() {
     return (
         <>
             {/* ================= NAVBAR ================= */}
-            <header className="bg-white py-2 sticky top-0 z-50 shadow-xs">
+            <header className="bg-white sticky top-0 z-50 shadow-xs">
                 <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                     {/* LOGO */}
                     <a href="/">
@@ -87,16 +81,8 @@ export default function Navbar() {
                                 className="h-12 w-12"
                             />
                             <div className="leading-tight">
-                                <div className="max-w-[220px] font-semibold text-lg text-blue-900 mb-[-5px] truncate">
-                                    {logo.line1}
-                                </div>
-
-                                <div className="max-w-[215px] font-semibold text-lg text-blue-900 truncate">
-                                    {logo.line2}
-                                </div>
-
-                                <div className="text-md text-slate-950">
-                                    {logo.university}
+                                <div className="max-w-[220px] font-semibold text-lg text mb-[-5px] truncate">
+                                    CSIT | UDRU
                                 </div>
                             </div>
                         </div>
@@ -309,7 +295,7 @@ export default function Navbar() {
                             value={lang}
                             onChange={(e) => {
                                 changeLang(e.target.value);
-                                setSidebarOpen(false); 
+                                setSidebarOpen(false);
                             }}
                             className="w-full border rounded-xl px-3 py-2 text-sm"
                         >

@@ -95,8 +95,7 @@ export default function ContactPage() {
 
             <div className="space-y-3 text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
               <div>
-                <p className="font-semibold text-gray-800 dark:text-slate-100">{t.address}</p>
-                <p>234 หมู่ 12 ต.สามพร้าว อ.เมือง จ.อุดรธานี 41000</p>
+                <p className="text-gray-800 dark:text-slate-100">234 หมู่ 12 ต.สามพร้าว อ.เมือง จ.อุดรธานี 41000</p>
               </div>
 
               {/* <div>

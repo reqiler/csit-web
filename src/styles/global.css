@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sarabun:wght@300;400;500;600&display=swap");
+@import "@fontsource/inter/300.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/sarabun/300.css";
+@import "@fontsource/sarabun/400.css";
+@import "@fontsource/sarabun/500.css";
+@import "@fontsource/sarabun/600.css";
 @import "tailwindcss";
 
 /* ===== Base styles ===== */
@@ -17,6 +24,14 @@
 }
 
 @layer base {
+    .font-sarabun {
+        font-family:
+            "Sarabun",
+            "Inter",
+            system-ui,
+            sans-serif;
+    }
+
     h1 {
         @apply text-3xl font-semibold tracking-tight text-slate-900;
     }

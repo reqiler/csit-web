@@ -122,7 +122,7 @@ function StaffCard({ staff }) {
   return (
     <div
       className="
-        group bg-slate-50 rounded-2xl w-[300px] sm:w-sm mx-auto
+        group bg-slate-50 rounded-2xl w-[320px] sm:w-sm mx-auto
         shadow-sm 
         transition-all duration-300
         flex flex-col
@@ -134,7 +134,7 @@ function StaffCard({ staff }) {
           src={img}
           alt={nameTH}
           className="
-            w-40 h-40
+            w-45 h-45
             shadow-sm
             rounded-full object-cover
             ring-4 ring-white

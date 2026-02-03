@@ -73,18 +73,15 @@ export default function Navbar() {
             <header className="bg-white sticky top-0 z-50 shadow-xs">
                 <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                     {/* LOGO */}
-                    <a href="/">
-                        <div className="flex items-center gap-4">
-                            <img
-                                src="/favicon.png"
-                                alt="CS-IT"
-                                className="h-12 w-12"
-                            />
-                            <div className="leading-tight">
-                                <div className="max-w-[220px] font-semibold text-lg text mb-[-5px] truncate">
-                                    CSIT | UDRU
-                                </div>
-                            </div>
+                    <a href="/" className="flex items-center gap-4 transition-all duration-300 hover:scale-[1.02]">
+                        <img src="/favicon.png" alt="CS-IT" className="h-12 w-12 rounded-full shadow-md" />
+                        <div className="flex flex-col">
+                            <span className="font-bold text-xl text-blue-900 tracking-tight">
+                                CSIT<span className="text-blue-600">UDRU</span>
+                            </span>
+                            <span className="text-xs text-gray-600 font-medium">
+                                Udonthani Rajabhat University
+                            </span>
                         </div>
                     </a>
 

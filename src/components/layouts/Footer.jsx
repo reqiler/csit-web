@@ -60,22 +60,22 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-700 transition">
+                <a href="/program-cs" className="hover:text-blue-700 transition">
                   หลักสูตร CS
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-700 transition">
+                <a href="/program-it" className="hover:text-blue-700 transition">
                   หลักสูตร IT
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-700 transition">
+                <a href="/staff" className="hover:text-blue-700 transition">
                   บุคลากร
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-700 transition">
+                <a href="/contact" className="hover:text-blue-700 transition">
                   ติดต่อเรา
                 </a>
               </li>

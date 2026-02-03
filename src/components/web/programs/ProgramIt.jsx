@@ -6,10 +6,10 @@ export default function ProgramIT() {
                 {/* ===== TITLE ===== */}
                 <div>
                     <h1 className="text-3xl font-bold text-slate-900 mb-2">
-                        วิทยาศาสตรบัณฑิต สาขาวิชาวิทยาการคอมพิวเตอร์
+                        วิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ
                     </h1>
                     <p className="text-slate-600">
-                        Bachelor of Science in Computer Science (Revised Curriculum 2021)
+                        Bachelor of Science in Information Technology (Revised Curriculum 2026)
                     </p>
                 </div>
 
@@ -21,24 +21,43 @@ export default function ProgramIT() {
                         <li><strong>จำนวนปีที่ศึกษา:</strong> 4 ปี</li>
                     </ul>
                     <ul className="space-y-2">
-                        <li><strong>จำนวนหน่วยกิตรวม:</strong> 130 หน่วยกิต</li>
-                        <li><strong>ปรับปรุงหลักสูตร:</strong> พ.ศ. 2564</li>
+                        <li><strong>จำนวนหน่วยกิตรวม:</strong> 121 หน่วยกิต</li>
+                        <li><strong>ปรับปรุงหลักสูตร:</strong> พ.ศ. 2569</li>
                     </ul>
                 </div>
 
                 {/* ===== 1. หมวดวิชาเฉพาะ ===== */}
-                <Section title="1. หมวดวิชาเฉพาะ (ไม่น้อยกว่า 95 หน่วยกิต)">
+                <Section title="1. หมวดวิชาเฉพาะ (ไม่น้อยกว่า 91 หน่วยกิต)">
 
-                    <SubSection title="1.1 วิชาแกน (ไม่น้อยกว่า 27 หน่วยกิต)">
-                        <CourseTable courses={[
-                            ["CS40102", "คณิตศาสตร์ดิสครีต", "Discrete Mathematics", "3(3-0-6)"],
-                            ["CS40205", "ระเบียบวิธีเชิงตัวเลขสำหรับวิทยาการคอมพิวเตอร์", "Numerical Methods for Computer Science", "3(3-0-6)"],
-                            ["CS40401", "สถิติศาสตร์สำหรับวิทยาการคอมพิวเตอร์", "Statistics for Computer Science", "3(2-2-5)"],
-                            ["EN56201", "ภาษาอังกฤษเพื่องานอาชีพ", "English for Occupational Purposes", "3(3-0-6)"],
-                            ["EN56202", "ภาษาอังกฤษเพื่อจุดประสงค์ทางวิชาการ", "English for Academic Purposes", "3(3-0-6)"],
-                            ["CS40103", "แคลคูลัสสำหรับวิทยาการคอมพิวเตอร์", "Calculus for Computer Science", "3(3-0-6)"],
-                            ["CS16101", "การเป็นผู้ประกอบการเทคโนโลยีสารสนเทศ", "Information Technology Entrepreneurship", "3(2-2-5)"],
-                        ]} />
+                    <SubSection title="1.1 วิชาแกน (ไม่น้อยกว่า 61 หน่วยกิต)">
+                        <CourseTable
+                            courses={[
+                                ["EN56205", "ภาษาอังกฤษเพื่องานอาชีพ", "English for Occupational Purposes", "3(3-0-6)"],
+                                ["EN56206", "ภาษาอังกฤษเพื่อจุดประสงค์ทางวิชาการ", "English for Academic Purposes", "3(3-0-6)"],
+
+                                ["IT01101", "พื้นฐานเทคโนโลยีสารสนเทศ", "Fundamentals of Information Technology", "3(2-2-5)"],
+                                ["IT01102", "คณิตศาสตร์สำหรับเทคโนโลยีสารสนเทศ", "Mathematics for Information Technology", "3(3-0-6)"],
+                                ["IT01103", "เว็บเทคโนโลยีและการออกแบบเว็บ", "Web Technology and Web Design", "3(2-2-5)"],
+                                ["IT01104", "เทคโนโลยีแพลตฟอร์ม", "Platform Technologies", "3(2-2-5)"],
+                                ["IT01105", "สถิติสำหรับเทคโนโลยีสารสนเทศ", "Statistics for Information Technology", "3(2-2-5)"],
+                                ["IT01106", "การปฏิสัมพันธ์ระหว่างมนุษย์และคอมพิวเตอร์", "Human and Computer Interaction", "3(2-2-5)"],
+                                ["IT01107", "หลักการเขียนโปรแกรมคอมพิวเตอร์", "Principle of Computer Programming", "3(2-2-5)"],
+
+                                ["IT01201", "การเขียนโปรแกรมเชิงวัตถุ", "Object-oriented Programming", "3(2-2-5)"],
+                                ["IT01202", "เครือข่ายคอมพิวเตอร์และเทคโนโลยีอินเทอร์เน็ต", "Computer Networks and Internet Technologies", "3(2-2-5)"],
+                                ["IT01203", "หลักการฐานข้อมูล", "Database Principles", "3(2-2-5)"],
+                                ["IT01204", "โครงสร้างข้อมูลและขั้นตอนวิธี", "Data Structure and Algorithms", "3(2-2-5)"],
+                                ["IT01205", "พื้นฐานปัญญาประดิษฐ์", "Fundamentals of Artificial Intelligence", "3(2-2-5)"],
+                                ["IT01206", "การพัฒนาโปรแกรมประยุกต์บนเว็บ", "Web Application Development", "3(2-2-5)"],
+                                ["IT01207", "การพัฒนาโปรแกรมประยุกต์บนอุปกรณ์เคลื่อนที่", "Mobile Application Development", "3(2-2-5)"],
+                                ["IT01208", "ระบบการจัดการฐานข้อมูลและการประยุกต์", "Database Management System and Applications", "3(2-2-5)"],
+
+                                ["IT01301", "พื้นฐานความมั่นคงปลอดภัยไซเบอร์", "Fundamentals of Cybersecurity", "3(2-2-5)"],
+                                ["IT01302", "การวิเคราะห์และออกแบบระบบสารสนเทศ", "Information System Analysis and Design", "3(2-2-5)"],
+                                ["IT01303", "การวิเคราะห์และออกแบบเชิงวัตถุ", "Object Oriented Analysis and Design", "3(2-2-5)"],
+                                ["IT01304", "หัวข้อพิเศษทางเทคโนโลยีสารสนเทศ", "Special Topics in Information Technology", "1(1-2-3)"],
+                            ]}
+                        />
                     </SubSection>
 
                     <SubSection title="1.1.1 แผนการเรียน (เลือก 1 แผน)">
@@ -46,158 +65,134 @@ export default function ProgramIT() {
                             เลือกแผนใดแผนหนึ่ง: แผนสหกิจศึกษา หรือ แผนโครงงานนักศึกษา
                         </p>
 
-                        <CourseTable courses={[
-                            ["CS18404", "สหกิจศึกษา", "Cooperative Education", "6(560)"],
-                            ["CS29406", "โครงงานทางวิทยาการคอมพิวเตอร์ 1", "Computer Science Project 1", "3(1-4-4)"],
-                            ["CS29407", "โครงงานทางวิทยาการคอมพิวเตอร์ 2", "Computer Science Project 2", "3(1-4-4)"],
-                        ]} />
+                        <CourseTable
+                            courses={[
+                                ["IT03401", "โครงงานทางเทคโนโลยีสารสนเทศ 1", "Senior Project in Information Technology 1", "3(1-4-4)"],
+                                ["IT03402", "โครงงานทางเทคโนโลยีสารสนเทศ 2", "Senior Project in Information Technology 2", "3(1-4-4)"],
+                                ["IT03403", "การเตรียมฝึกประสบการณ์วิชาชีพด้านเทคโนโลยีสารสนเทศ", "Preparation for Professional Experience in Information Technology", "1(1-2-3)"],
+                                ["IT03404", "การฝึกประสบการณ์วิชาชีพด้านเทคโนโลยีสารสนเทศ", "Professional Experience in Information Technology", "2(240)"],
+
+                                ["IT03405", "เตรียมสหกิจศึกษา", "Cooperative Education Preparation", "3(2-2-5)"],
+                                ["IT03406", "สหกิจศึกษา", "Cooperative Education", "6(480)"],
+                            ]}
+                        />
                     </SubSection>
 
-                    <SubSection title="1.2 วิชาเฉพาะด้าน (ไม่น้อยกว่า 47 หน่วยกิต)">
-
-                        {/* Group 1.2.1 */}
-                        <h4 className="font-semibold text-slate-800">1.2.1 กลุ่มประเด็นด้านองค์การและระบบสารสนเทศ</h4>
-                        <CourseTable courses={[
-                            ["CS18402", "การเตรียมฝึกประสบการณ์ภาคสนาม", "Preparation for Field Experiences", "1(1-2-3)"],
-                            ["CS19301", "การวิเคราะห์และออกแบบระบบ", "System Analysis and Design", "3(2-2-5)"],
-                            ["CS26201", "ระบบฐานข้อมูล", "Database Systems", "3(2-2-5)"],
-                            ["CS26207", "ระบบจัดการฐานข้อมูล", "Database Management Systems", "3(2-2-5)"],
-                            ["CS39302", "การออกแบบและพัฒนาซอฟต์แวร์เชิงวัตถุ", "Object-oriented Software Design and Development", "3(2-2-5)"],
-                        ]} />
-
-                        {/* Group 1.2.2 */}
-                        <h4 className="font-semibold text-slate-800">1.2.2 กลุ่มเทคโนโลยีเพื่อการประยุกต์</h4>
-                        <CourseTable courses={[
-                            ["CS23304", "พื้นฐานความมั่นคงของคอมพิวเตอร์และเครือข่าย", "Fundamental of Computer and Network Security", "3(2-2-5)"],
-                            ["CS27301", "ปัญญาประดิษฐ์", "Artificial Intelligence", "3(2-2-5)"],
-                            ["CS29305", "การสัมมนาทางวิทยาการคอมพิวเตอร์", "Seminars on Computer Science", "1(0-2-1)"],
-                        ]} />
-
-                        {/* Group 1.2.3 */}
-                        <h4 className="font-semibold text-slate-800">1.2.3 กลุ่มเทคโนโลยีและวิธีการทางซอฟต์แวร์</h4>
-                        <CourseTable courses={[
-                            ["CS34101", "การเขียนโปรแกรมคอมพิวเตอร์", "Computer Programming", "3(2-2-5)"],
-                            ["CS34102", "การเขียนโปรแกรมเชิงวัตถุ", "Object-oriented Programming", "3(2-2-5)"],
-                            ["CS34203", "การเขียนโปรแกรมคอมพิวเตอร์ขั้นสูง", "Advanced Computer Programming", "3(2-2-5)"],
-                            ["CS34205", "การเขียนโปรแกรมบนเว็บ", "Web-based Programming", "3(2-2-5)"],
-                        ]} />
-
-                        {/* Group 1.2.4 */}
-                        <h4 className="font-semibold text-slate-800">1.2.4 กลุ่มโครงสร้างพื้นฐานของระบบ</h4>
-                        <CourseTable courses={[
-                            ["CS40101", "วิทยาการคอมพิวเตอร์พื้นฐาน", "Fundamental of Computer Science", "3(2-2-5)"],
-                            ["CS41203", "โครงสร้างข้อมูลและขั้นตอนวิธี", "Data Structure and Algorithms", "3(2-2-5)"],
-                            ["CS42102", "ระบบปฏิบัติการ", "Operating Systems", "3(2-2-5)"],
-                            ["CS23202", "การสื่อสารข้อมูลและระบบเครือข่าย", "Data Communication and Network System", "3(2-2-5)"],
-                        ]} />
-
-                        {/* Group 1.2.5 */}
-                        <h4 className="font-semibold text-slate-800">1.2.5 กลุ่มฮาร์ดแวร์และสถาปัตยกรรมคอมพิวเตอร์</h4>
-                        <CourseTable courses={[
-                            ["CS52101", "องค์ประกอบและสถาปัตยกรรมคอมพิวเตอร์", "Computer Organization and Architecture", "3(2-2-5)"],
-                        ]} />
-
-                    </SubSection>
-
-                    {/* ===== 1.3 วิชาเอกเลือก ===== */}
-                    <SubSection title="1.3 วิชาเอกเลือก (ไม่น้อยกว่า 18 หน่วยกิต)">
+                    {/* ===== 1.2 วิชาเอกเลือก ===== */}
+                    <SubSection title="1.2 วิชาเอกเลือก (ไม่น้อยกว่า 21 หน่วยกิต)">
 
                         <p className="text-slate-600 mb-6">
                             เลือก 1 กลุ่มวิชา ไม่น้อยกว่า 12 หน่วยกิต และเลือกจากรายวิชาที่กำหนดเพิ่มเติมไม่น้อยกว่า 6 หน่วยกิต
                         </p>
 
-                        {/* ================= 1.3.1 เลือก 1 กลุ่ม ================= */}
-
-                        {/* กลุ่มเครือข่ายฯ */}
+                        {/* 2.1.1 กลุ่มเทคโนโลยีธุรกิจดิจิทัล */}
                         <h4 className="mt-10 mb-4 font-semibold text-slate-800">
-                            1) กลุ่มเครือข่ายคอมพิวเตอร์และความมั่นคงไซเบอร์
+                            1) กลุ่มเทคโนโลยีธุรกิจดิจิทัล
                         </h4>
                         <CourseTable courses={[
-                            ["CS23306", "เครือข่ายไร้สาย", "Wireless Network", "3(2-2-5)"],
-                            ["CS23307", "การพัฒนาโปรแกรมเครือข่ายคอมพิวเตอร์", "Network Programming", "3(2-2-5)"],
-                            ["CS23401", "ความมั่นคงไซเบอร์", "Cybersecurity", "3(2-2-5)"],
-                            ["CS23402", "การประมวลผลแบบคลาวด์", "Cloud Computing", "3(2-2-5)"],
+                            ["IT02301", "การตลาดดิจิทัลและพาณิชย์อิเล็กทรอนิกส์", "Digital Marketing and E-Commerce", "3(2-2-5)"],
+                            ["IT02302", "ระบบสารสนเทศเพื่อการจัดการองค์กร", "Enterprise Information Systems", "3(2-2-5)"],
+                            ["IT02303", "การพัฒนาระบบอัจฉริยะทางธุรกิจ", "Business Intelligence System Development", "3(2-2-5)"],
+                            ["IT02304", "ฟินเทคและบล็อกเชนสำหรับธุรกิจ", "FinTech and Blockchain for Business", "3(2-2-5)"],
                         ]} />
 
-                        {/* กลุ่มซอฟต์แวร์ */}
+                        {/* 2.1.2 กลุ่มการพัฒนาซอฟต์แวร์แบบฟูลสแต็ก */}
                         <h4 className="mt-14 mb-4 font-semibold text-slate-800">
-                            2) กลุ่มวิธีการทางซอฟต์แวร์และการพัฒนาเชิงประยุกต์
+                            2) กลุ่มการพัฒนาซอฟต์แวร์แบบฟูลสแต็ก
                         </h4>
                         <CourseTable courses={[
-                            ["CS24306", "การพัฒนาโปรแกรมประยุกต์บนเว็บขั้นสูง", "Advanced Web Application Development", "3(2-2-5)"],
-                            ["CS39404", "การทดสอบและประเมินคุณภาพซอฟต์แวร์", "Testing and Quality Evaluation of Software", "3(2-2-5)"],
-                            ["CS39303", "วิศวกรรมซอฟต์แวร์", "Software Engineering", "3(2-2-5)"],
-                            ["CS41401", "หลักการและการประมวลภาษาโปรแกรม", "Programming Language Principles and Processing", "3(2-2-5)"],
+                            ["IT02305", "สถาปัตยกรรมซอฟต์แวร์และการออกแบบระบบ", "Software Architecture and System Design", "3(2-2-5)"],
+                            ["IT02306", "การพัฒนาแอปพลิเคชันบนคลาวด์และดевอปส์", "Cloud Application Development and DevOps", "3(2-2-5)"],
+                            ["IT02307", "การพัฒนาโปรแกรมประยุกต์ส่วนหลัง", "Back-end Application Development", "3(2-2-5)"],
+                            ["IT02308", "การพัฒนาโปรแกรมประยุกต์ส่วนหน้า", "Front-end Application Development", "3(2-2-5)"],
                         ]} />
 
-                        {/* กลุ่มวิทยาการข้อมูล */}
+                        {/* 2.1.3 กลุ่มวิทยาการข้อมูลเชิงประยุกต์ */}
                         <h4 className="mt-14 mb-4 font-semibold text-slate-800">
-                            3) กลุ่มวิทยาการข้อมูล
+                            3) กลุ่มวิทยาการข้อมูลเชิงประยุกต์
                         </h4>
                         <CourseTable courses={[
-                            ["CS26301", "พื้นฐานวิทยาการข้อมูล", "Foundations of Data Science", "3(2-2-5)"],
-                            ["CS27304", "การเรียนรู้ของเครื่องและการเรียนรู้เชิงลึก", "Machine Learning and Deep Learning", "3(2-2-5)"],
-                            ["CS26401", "การวิเคราะห์ข้อมูลขนาดใหญ่", "Big Data Analytics", "3(2-2-5)"],
-                            ["CS26406", "การทำเหมืองข้อมูล", "Data Mining", "3(2-2-5)"],
+                            ["IT02309", "วิศวกรรมข้อมูล", "Data Engineering", "3(2-2-5)"],
+                            ["IT02310", "ปัญญาประดิษฐ์เพื่อการประยุกต์", "Artificial Intelligence and Applications", "3(2-2-5)"],
+                            ["IT02311", "เทคโนโลยีการวิเคราะห์และจัดการข้อมูลขนาดใหญ่", "Big Data Analytics and Management Technologies", "3(2-2-5)"],
+                            ["IT02312", "การสร้างสรรค์เรื่องและการเล่าเรื่องด้วยข้อมูล", "Data Visualization and Storytelling with Data", "3(2-2-5)"],
+                        ]} />
+
+                        {/* 2.1.4 กลุ่มความมั่นคงปลอดภัยไซเบอร์ */}
+                        <h4 className="mt-14 mb-4 font-semibold text-slate-800">
+                            4) กลุ่มความมั่นคงปลอดภัยไซเบอร์
+                        </h4>
+                        <CourseTable courses={[
+                            ["IT02313", "ความมั่นคงปลอดภัยเว็บและโมบาย", "Web and Mobile Security", "3(2-2-5)"],
+                            ["IT02314", "การเขียนโค้ดให้มีความปลอดภัย", "Secure Coding", "3(2-2-5)"],
+                            ["IT02315", "การตรวจจับและตอบสนองต่อเหตุการณ์ด้านความมั่นคงปลอดภัยไซเบอร์", "Cybersecurity Incident Detection and Response", "3(2-2-5)"],
+                            ["IT02316", "การทดสอบเจาะระบบ", "Penetration Testing", "3(2-2-5)"],
+                        ]} />
+
+                        {/* 2.1.5 กลุ่มการออกแบบและการจัดการซอฟต์แวร์ */}
+                        <h4 className="mt-14 mb-4 font-semibold text-slate-800">
+                            5) กลุ่มการออกแบบและการจัดการซอฟต์แวร์
+                        </h4>
+                        <CourseTable courses={[
+                            ["IT02317", "วิศวกรรมความต้องการ", "Requirement Engineering", "3(2-2-5)"],
+                            ["IT02318", "การออกแบบประสบการณ์และส่วนต่อประสานผู้ใช้", "UX/UI Design", "3(2-2-5)"],
+                            ["IT02319", "วิศวกรรมซอฟต์แวร์", "Software Engineering", "3(2-2-5)"],
+                            ["IT02320", "การจัดการโครงการซอฟต์แวร์", "Software Project Management", "3(2-2-5)"],
+                        ]} />
+
+                        {/* 2.1.6 กลุ่มการทดสอบระบบซอฟต์แวร์ */}
+                        <h4 className="mt-14 mb-4 font-semibold text-slate-800">
+                            6) กลุ่มการทดสอบระบบซอฟต์แวร์
+                        </h4>
+                        <CourseTable courses={[
+                            ["IT02321", "คุณภาพซอฟต์แวร์และการทดสอบระบบ", "Software Quality Assurance and Testing", "3(2-2-5)"],
+                            ["IT02322", "การพัฒนาเทสต์อีเวนต์", "Test Event Development", "3(2-2-5)"],
+                            ["IT02323", "การเขียนโปรแกรมสำหรับการทดสอบซอฟต์แวร์เชิงอัตโนมัติ", "Programming for Test Automation", "3(2-2-5)"],
+                            ["IT02324", "การทดสอบประสิทธิภาพและความมั่นคงปลอดภัยของซอฟต์แวร์", "Performance and Security Testing", "3(2-2-5)"],
                         ]} />
 
                         {/* ================= 1.3.2 เลือกเพิ่มเติม ================= */}
 
                         <h4 className="mt-20 mb-4 font-semibold text-slate-800">
-                            1.3.2 เลือกจากรายวิชาที่กำหนด (ไม่น้อยกว่า 6 หน่วยกิต)
+                            1.3.2 เลือกจากรายวิชาที่กำหนด (ไม่น้อยกว่า 9 หน่วยกิต)
                         </h4>
 
-                        <CourseTable courses={[
-                            ["CS16303", "ระบบสารสนเทศเพื่อการจัดการ", "Management Information Systems", "3(2-2-5)"],
-                            ["CS20304", "การประยุกต์คอมพิวเตอร์สำหรับคณิตศาสตร์", "Computer Applications for Mathematics", "3(2-2-5)"],
-                            ["CS22404", "ความรู้พื้นฐานระบบฝังตัวและเวลาจริง", "Fundamental of Embedded and Real-time Systems", "3(2-2-5)"],
-                            ["CS23303", "ระบบเครือข่ายขั้นสูง", "Advanced Network System", "3(2-2-5)"],
-                            ["CS23406", "ระบบแบบกระจาย", "Distributed Systems", "3(2-2-5)"],
-                            ["CS24307", "การพัฒนาแอพพลิเคชันบนอุปกรณ์เคลื่อนที่", "Mobile Application Development", "3(2-2-5)"],
-                            ["CS24308", "พาณิชย์อิเล็กทรอนิกส์", "Electronic Commerce", "3(2-2-5)"],
-                            ["CS25301", "การประมวลผลภาพ", "Image Processing", "3(2-2-5)"],
-                            ["CS26304", "ระบบการสืบค้นสารสนเทศ", "Information Retrieval Systems", "3(2-2-5)"],
-                            ["CS26405", "ระบบสนับสนุนการตัดสินใจ", "Decision Support System", "3(2-2-5)"],
-                            ["CS27403", "เทคโนโลยีชาญฉลาด", "Intelligence Technology", "3(2-2-5)"],
-                            ["CS27404", "โครงข่ายประสาทเทียม", "Artificial Neural Network", "3(2-2-5)"],
-                            ["CS27405", "ระบบผู้เชี่ยวชาญ", "Expert Systems", "3(2-2-5)"],
-                            ["CS31403", "การสร้างคอมไพเลอร์", "Compiler Construction", "3(2-2-5)"],
-                            ["CS34204", "การเขียนโปรแกรมภาษาแอสเซมบลี", "Assembly Programming", "3(2-2-5)"],
-                            ["CS34307", "การเขียนโปรแกรมเกม", "Game Programming", "3(2-2-5)"],
-                            ["CS39304", "การปฏิสัมพันธ์ระหว่างมนุษย์และคอมพิวเตอร์", "Human-Computer Interaction", "3(2-2-5)"],
-                            ["CS40203", "ทฤษฎีการคำนวณ", "Theory of Computation", "3(2-2-5)"],
-                            ["CS24201", "การพัฒนาเว็บไซต์ด้วยโปรแกรมสำเร็จรูป", "Website Development using Software Packages", "3(2-2-5)"],
-                            ["CS44101", "วิทยาการคำนวณและการเขียนโปรแกรมเบื้องต้น", "Computing Science and Basic Programming", "3(2-2-5)"],
-                            ["CS23301", "เทคโนโลยีบล็อกเชนและธุรกรรมแบบกระจาย", "Blockchain and Distributed Ledger Technologies", "3(2-2-5)"],
-                            ["CS27303", "การมองเห็นของคอมพิวเตอร์", "Computer Vision", "3(2-2-5)"],
-                            ["CS27302", "ปัญญาประดิษฐ์ขั้นสูง", "Advanced Artificial Intelligence", "3(2-2-5)"],
-                            ["CS41301", "ความน่าจะเป็นและสถิติคณิตศาสตร์สำหรับวิทยาการข้อมูล", "Probability and Mathematical Statistics for Data Science", "3(2-2-5)"],
-                            ["CS27305", "รูปแบบการรู้จำและการประยุกต์ใช้งาน", "Pattern Recognition and its Applications", "3(2-2-5)"],
-                            ["CS23302", "หลักการของอินเทอร์เน็ตของสรรพสิ่ง", "Principle of Internet of Things", "3(2-2-5)"],
-                            ["CS26305", "การประยุกต์ใช้คอมพิวเตอร์ในชีวิตประจำวัน", "Computer Applications in Daily Life", "3(2-2-5)"],
-                            ["CS25303", "ระบบมัลติมีเดียและการประยุกต์", "Multimedia Systems and Applications", "3(2-2-5)"],
-                        ]} />
+                        <CourseTable
+                            courses={[
+                                ["IT02325", "วิทยาการข้อมูล", "Data Science", "3(2-2-5)"],
+                                ["IT02326", "ปัญญาประดิษฐ์เชิงสร้างสรรค์และการประยุกต์ใช้", "Generative AI and Applications", "3(2-2-5)"],
+                                ["IT02327", "การค้นคืนสารสนเทศ", "Information Retrieval", "3(2-2-5)"],
+                                ["IT02328", "การประมวลผลภาษาธรรมชาติ", "Natural Language Processing", "3(2-2-5)"],
+                                ["IT02329", "การพัฒนาแอปพลิเคชันบนอุปกรณ์เคลื่อนที่ขั้นสูง", "Advanced Mobile Application Development", "3(2-2-5)"],
+                                ["IT02330", "การออกแบบและพัฒนาโปรแกรมประยุกต์บนเว็บทันสมัย", "Modern Web Application Development", "3(2-2-5)"],
+                                ["IT02331", "การออกแบบเพื่อการเข้าถึงและความเท่าเทียมของผู้ใช้", "Accessibility and Inclusive Design", "3(2-2-5)"],
+                                ["IT02332", "การจัดการและบำรุงรักษาระบบเทคโนโลยีสารสนเทศ", "IT Operations and System Maintenance", "3(2-2-5)"],
+                                ["IT02333", "การประยุกต์ใช้เทคโนโลยีดิจิทัลในธุรกิจ", "Digital Technology Applications in Business", "3(2-2-5)"],
+                                ["IT02334", "การวิเคราะห์เครือข่ายสังคม", "Social Network Analysis", "3(2-2-5)"],
+                                ["IT02335", "การวิเคราะห์ภัยคุกคามและนิติวิทยาศาสตร์ดิจิทัล", "Cyber Threat Analysis and Digital Forensics", "3(2-2-5)"],
+                                ["IT02336", "วิทยาการรหัสลับและความมั่นคงปลอดภัยของข้อมูล", "Cryptography and Data Security", "3(2-2-5)"],
+                                ["IT02337", "กฎหมายและธรรมาภิบาลความมั่นคงปลอดภัยไซเบอร์", "Cybersecurity Law and Governance", "3(2-2-5)"],
+                                ["IT02338", "การออกแบบและพัฒนาสื่อดิจิทัล", "Digital Media Design and Development", "3(2-2-5)"],
 
-                    </SubSection>
-
-                    {/* ===== 1.4 วิชาประสบการณ์ภาคสนาม ===== */}
-                    <SubSection title="1.4 วิชาประสบการณ์ภาคสนาม (ไม่น้อยกว่า 3 หน่วยกิต)">
-
-                        <CourseTable courses={[
-                            [
-                                "CS18302",
-                                "การฝึกประสบการณ์วิชาชีพด้านวิทยาการคอมพิวเตอร์",
-                                "Field Experiences in Computer Science",
-                                "3(-280-)"
-                            ],
-                        ]} />
+                                ["IT02339", "การออกแบบและสร้างอินโฟกราฟิกเบื้องต้น", "Introduction to Infographic Design", "3(2-2-5)"],
+                                ["IT02340", "เทคโนโลยีเสมือนจริง", "VR Technology and Development", "3(2-2-5)"],
+                                ["IT02341", "การพัฒนาประสบการณ์ใช้งานบนอุปกรณ์เสมือนและอุปกรณ์จริง", "AR/VR User Experience Development", "3(2-2-5)"],
+                                ["IT02342", "ศิลปะดิจิทัลและเทคนิคการออกแบบเชิงสร้างสรรค์", "Digital Art and Creative Design Techniques", "3(2-2-5)"],
+                                ["IT02343", "เทคโนโลยีการจัดเก็บข้อมูลแบบกระจาย", "Distributed Storage Technologies", "3(2-2-5)"],
+                                ["IT02344", "ความมั่นคงปลอดภัยบนคลาวด์", "Cloud Security", "3(2-2-5)"],
+                                ["IT02345", "เทคโนโลยีอินเทอร์เน็ตในทุกสรรพสิ่ง", "Internet of Things Technology", "3(2-2-5)"],
+                                ["IT02346", "สตาร์ทอัพและเทคโนโลยีนวัตกรรม", "Tech Startup and Innovation Technology", "3(2-2-5)"],
+                                ["IT02347", "ไวป์โค้ดดิ้ง", "Vibe Coding", "3(2-2-5)"],
+                                ["IT02348", "เทคโนโลยีเกิดใหม่", "Emerging Technologies", "3(2-2-5)"],
+                            ]}
+                        />
 
                     </SubSection>
                 </Section>
 
                 {/* ===== 2 & 3 ===== */}
                 <Section title="2. หมวดวิชาศึกษาทั่วไป">
-                    <p className="text-slate-600">ไม่น้อยกว่า 30 หน่วยกิต</p>
+                    <p className="text-slate-600">ไม่น้อยกว่า 24 หน่วยกิต</p>
                 </Section>
 
                 <Section title="3. หมวดวิชาเลือกเสรี">

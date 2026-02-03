@@ -42,10 +42,10 @@ export default function ContactPage() {
     <section className="max-w-7xl mx-auto px-4 py-20 font-sarabun">
       {/* HEADER */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-semibold text-gray-800">
+        <h2 className="text-4xl font-semibold text-gray-800 dark:text-slate-100">
           {t.title}
         </h2>
-        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+        <p className="text-gray-600 dark:text-slate-400 mt-4 max-w-2xl mx-auto leading-relaxed">
           {t.subtitle}
         </p>
       </div>
@@ -53,23 +53,23 @@ export default function ContactPage() {
       {/* CONTENT */}
       <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] gap-12">
         {/* MAP */}
-        <div className="bg-slate-50 rounded-2xl shadow-sm p-6 transition-all duration-300">
+        <div className="bg-slate-50 dark:bg-slate-900/60 rounded-2xl shadow-sm ring-1 ring-slate-100 dark:ring-slate-800 p-6 transition-all duration-300">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between mb-4">
-            <h2 className="text-xl font-semibold text-gray-800">
+            <h2 className="text-xl font-semibold text-gray-800 dark:text-slate-100">
               {t.mapTitle}
             </h2>
             <a
               href="https://www.google.com/maps?q=17.4518949,102.9362667"
               target="_blank"
               rel="noreferrer"
-              className="text-sm text-blue-600 hover:underline"
+              className="text-sm text-blue-600 dark:text-sky-400 hover:underline"
             >
               {t.openMap}
             </a>
           </div>
 
           <div
-            className="overflow-hidden rounded-2xl border border-white/70 bg-white"
+            className="overflow-hidden rounded-2xl border border-white/70 dark:border-slate-800 bg-white dark:bg-slate-900"
             style={{ aspectRatio: "16 / 9" }}
           >
             <iframe
@@ -81,21 +81,21 @@ export default function ContactPage() {
             />
           </div>
 
-          <div className="mt-4 text-sm text-gray-600">
+          <div className="mt-4 text-sm text-gray-600 dark:text-slate-400">
             {t.gps}: 17.4518949, 102.9362667
           </div>
         </div>
 
         {/* CONTACT INFO */}
         <div className="space-y-6">
-          <div className="bg-slate-50 rounded-2xl shadow-sm p-6 space-y-4 transition-all duration-300">
-            <h2 className="text-xl font-semibold text-gray-800">
+          <div className="bg-slate-50 dark:bg-slate-900/60 rounded-2xl shadow-sm ring-1 ring-slate-100 dark:ring-slate-800 p-6 space-y-4 transition-all duration-300">
+            <h2 className="text-xl font-semibold text-gray-800 dark:text-slate-100">
               {t.locationTitle}
             </h2>
 
-            <div className="space-y-3 text-sm text-gray-600">
+            <div className="space-y-3 text-sm text-gray-600 dark:text-slate-400 leading-relaxed">
               <div>
-                <p className="font-semibold text-gray-800">{t.address}</p>
+                <p className="font-semibold text-gray-800 dark:text-slate-100">{t.address}</p>
                 <p>234 หมู่ 12 ต.สามพร้าว อ.เมือง จ.อุดรธานี 41000</p>
               </div>
 
@@ -123,8 +123,8 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="bg-slate-50 rounded-2xl shadow-sm p-6 transition-all duration-300">
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">
+          <div className="bg-slate-50 dark:bg-slate-900/60 rounded-2xl shadow-sm ring-1 ring-slate-100 dark:ring-slate-800 p-6 transition-all duration-300">
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-slate-100 mb-3">
               {t.quickTitle}
             </h3>
             <div className="grid gap-3">
@@ -132,7 +132,7 @@ export default function ContactPage() {
                 href="https://www.facebook.com/csitudru"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-blue-600 text-white"
+                className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-blue-600 dark:bg-sky-500 text-white transition-colors hover:bg-blue-700 dark:hover:bg-sky-600"
               >
                 {t.facebook}
               </a>
@@ -140,13 +140,13 @@ export default function ContactPage() {
                 href="https://line.me/R/ti/p/@290rxktj"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-emerald-600 text-white"
+                className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-emerald-600 text-white transition-colors hover:bg-emerald-700"
               >
                 {t.line}
               </a>
               <a
                 href="mailto:csit@udru.ac.th"
-                className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-white text-blue-700 border border-blue-200"
+                className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-medium bg-white dark:bg-slate-950 text-blue-700 dark:text-sky-400 border border-blue-200 dark:border-slate-700 transition-colors hover:bg-blue-50 dark:hover:bg-slate-900"
               >
                 {t.emailButton}
               </a>

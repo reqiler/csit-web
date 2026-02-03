@@ -96,27 +96,27 @@ export default function ProgramCS() {
     const lang = useLanguage();
     const t = copy[lang] || copy.th;
     return (
-        <section className="bg-white py-20">
+        <section className="bg-white dark:bg-slate-950 py-20">
             <div className="max-w-7xl mx-auto px-6 space-y-8">
 
                 {/* ===== TITLE ===== */}
-                <div>
-                    <h1 className="text-3xl font-bold text-slate-900 mb-2">
+                <div className="pb-6 border-b border-slate-200 dark:border-slate-800">
+                    <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">
                         {t.title}
                     </h1>
-                    <p className="text-slate-600">
+                    <p className="text-slate-600 dark:text-slate-400">
                         {t.subtitle}
                     </p>
                 </div>
 
                 {/* ===== OVERVIEW ===== */}
-                <div className="grid md:grid-cols-2 gap-8 text-sm text-slate-700">
-                    <ul className="space-y-2">
+                <div className="grid md:grid-cols-2 gap-8 text-sm text-slate-700 dark:text-slate-300">
+                    <ul className="space-y-2 rounded-2xl border border-slate-100 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900/40 p-5">
                         <li><strong>{t.overview.levelLabel}:</strong> {t.overview.levelValue}</li>
                         <li><strong>{t.overview.facultyLabel}:</strong> {t.overview.facultyValue}</li>
                         <li><strong>{t.overview.yearsLabel}:</strong> {t.overview.yearsValue}</li>
                     </ul>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 rounded-2xl border border-slate-100 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900/40 p-5">
                         <li><strong>{t.overview.creditsLabel}:</strong> {t.overview.creditsValue}</li>
                         <li><strong>{t.overview.revisedLabel}:</strong> {t.overview.revisedValue}</li>
                     </ul>
@@ -138,7 +138,7 @@ export default function ProgramCS() {
                     </SubSection>
 
                     <SubSection title={t.section1_1_1}>
-                        <p className="text-slate-600 mb-4">
+                        <p className="text-slate-600 dark:text-slate-400 mb-4">
                             {t.section1_1_1_note}
                         </p>
 
@@ -152,7 +152,7 @@ export default function ProgramCS() {
                     <SubSection title={t.section1_2}>
 
                         {/* Group 1.2.1 */}
-                        <h4 className="font-semibold text-slate-800">{t.group1_2_1}</h4>
+                        <h4 className="font-semibold text-slate-800 dark:text-slate-200">{t.group1_2_1}</h4>
                         <CourseTable courses={[
                             ["CS18402", "การเตรียมฝึกประสบการณ์ภาคสนาม", "Preparation for Field Experiences", "1(1-2-3)"],
                             ["CS19301", "การวิเคราะห์และออกแบบระบบ", "System Analysis and Design", "3(2-2-5)"],
@@ -162,7 +162,7 @@ export default function ProgramCS() {
                         ]} />
 
                         {/* Group 1.2.2 */}
-                        <h4 className="font-semibold text-slate-800">{t.group1_2_2}</h4>
+                        <h4 className="font-semibold text-slate-800 dark:text-slate-200">{t.group1_2_2}</h4>
                         <CourseTable courses={[
                             ["CS23304", "พื้นฐานความมั่นคงของคอมพิวเตอร์และเครือข่าย", "Fundamental of Computer and Network Security", "3(2-2-5)"],
                             ["CS27301", "ปัญญาประดิษฐ์", "Artificial Intelligence", "3(2-2-5)"],
@@ -170,7 +170,7 @@ export default function ProgramCS() {
                         ]} />
 
                         {/* Group 1.2.3 */}
-                        <h4 className="font-semibold text-slate-800">{t.group1_2_3}</h4>
+                        <h4 className="font-semibold text-slate-800 dark:text-slate-200">{t.group1_2_3}</h4>
                         <CourseTable courses={[
                             ["CS34101", "การเขียนโปรแกรมคอมพิวเตอร์", "Computer Programming", "3(2-2-5)"],
                             ["CS34102", "การเขียนโปรแกรมเชิงวัตถุ", "Object-oriented Programming", "3(2-2-5)"],
@@ -179,7 +179,7 @@ export default function ProgramCS() {
                         ]} />
 
                         {/* Group 1.2.4 */}
-                        <h4 className="font-semibold text-slate-800">{t.group1_2_4}</h4>
+                        <h4 className="font-semibold text-slate-800 dark:text-slate-200">{t.group1_2_4}</h4>
                         <CourseTable courses={[
                             ["CS40101", "วิทยาการคอมพิวเตอร์พื้นฐาน", "Fundamental of Computer Science", "3(2-2-5)"],
                             ["CS41203", "โครงสร้างข้อมูลและขั้นตอนวิธี", "Data Structure and Algorithms", "3(2-2-5)"],
@@ -188,7 +188,7 @@ export default function ProgramCS() {
                         ]} />
 
                         {/* Group 1.2.5 */}
-                        <h4 className="font-semibold text-slate-800">{t.group1_2_5}</h4>
+                        <h4 className="font-semibold text-slate-800 dark:text-slate-200">{t.group1_2_5}</h4>
                         <CourseTable courses={[
                             ["CS52101", "องค์ประกอบและสถาปัตยกรรมคอมพิวเตอร์", "Computer Organization and Architecture", "3(2-2-5)"],
                         ]} />
@@ -198,14 +198,14 @@ export default function ProgramCS() {
                     {/* ===== 1.3 วิชาเอกเลือก ===== */}
                     <SubSection title={t.section1_3}>
 
-                        <p className="text-slate-600 mb-6">
+                        <p className="text-slate-600 dark:text-slate-400 mb-6">
                             {t.section1_3_note}
                         </p>
 
                         {/* ================= 1.3.1 เลือก 1 กลุ่ม ================= */}
 
                         {/* กลุ่มเครือข่ายฯ */}
-                        <h4 className="mt-10 mb-4 font-semibold text-slate-800">
+                        <h4 className="mt-10 mb-4 font-semibold text-slate-800 dark:text-slate-200">
                             {t.track1}
                         </h4>
                         <CourseTable courses={[
@@ -216,7 +216,7 @@ export default function ProgramCS() {
                         ]} />
 
                         {/* กลุ่มซอฟต์แวร์ */}
-                        <h4 className="mt-14 mb-4 font-semibold text-slate-800">
+                        <h4 className="mt-14 mb-4 font-semibold text-slate-800 dark:text-slate-200">
                             {t.track2}
                         </h4>
                         <CourseTable courses={[
@@ -227,7 +227,7 @@ export default function ProgramCS() {
                         ]} />
 
                         {/* กลุ่มวิทยาการข้อมูล */}
-                        <h4 className="mt-14 mb-4 font-semibold text-slate-800">
+                        <h4 className="mt-14 mb-4 font-semibold text-slate-800 dark:text-slate-200">
                             {t.track3}
                         </h4>
                         <CourseTable courses={[
@@ -239,7 +239,7 @@ export default function ProgramCS() {
 
                         {/* ================= 1.3.2 เลือกเพิ่มเติม ================= */}
 
-                        <h4 className="mt-20 mb-4 font-semibold text-slate-800">
+                        <h4 className="mt-20 mb-4 font-semibold text-slate-800 dark:text-slate-200">
                             {t.section1_3_2}
                         </h4>
 
@@ -293,11 +293,11 @@ export default function ProgramCS() {
 
                 {/* ===== 2 & 3 ===== */}
                 <Section title={t.section2}>
-                    <p className="text-slate-600">{t.section2_note}</p>
+                    <p className="text-slate-600 dark:text-slate-400">{t.section2_note}</p>
                 </Section>
 
                 <Section title={t.section3}>
-                    <p className="text-slate-600">{t.section3_note}</p>
+                    <p className="text-slate-600 dark:text-slate-400">{t.section3_note}</p>
                 </Section>
 
             </div>
@@ -309,7 +309,7 @@ export default function ProgramCS() {
 function Section({ title, children }) {
     return (
         <div className="space-y-3">
-            <h2 className="text-xl font-bold border-l-4 border-blue-900 pl-4 text-slate-900">
+            <h2 className="text-xl font-bold border-l-4 border-blue-900 dark:border-sky-400 pl-4 text-slate-900 dark:text-slate-100">
                 {title}
             </h2>
             {children}
@@ -320,7 +320,7 @@ function Section({ title, children }) {
 function SubSection({ title, children }) {
     return (
         <div className="space-y-2">
-            <h3 className="text-lg font-semibold text-slate-800">
+            <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200">
                 {title}
             </h3>
             {children}
@@ -333,24 +333,24 @@ function CourseTable({ courses }) {
     const t = copy[lang] || copy.th;
 
     return (
-        <div className="overflow-x-auto border rounded-xl mb-8">
+        <div className="overflow-x-auto border border-slate-200 dark:border-slate-800 rounded-2xl mb-8 bg-white dark:bg-slate-900 shadow-sm">
             <table className="w-full text-sm">
-                <thead className="bg-slate-100">
+                <thead className="bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400">
                     <tr>
-                        <th className="px-4 py-3 text-left">{t.table.code}</th>
-                        <th className="px-4 py-3 text-left">{t.table.name}</th>
-                        <th className="px-4 py-3 text-left">{t.table.credits}</th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide">{t.table.code}</th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide">{t.table.name}</th>
+                        <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide">{t.table.credits}</th>
                     </tr>
                 </thead>
-                <tbody className="divide-y">
+                <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
                     {courses.map((c, i) => (
-                        <tr key={i} className="hover:bg-slate-50">
+                        <tr key={i} className="odd:bg-white even:bg-slate-50/40 dark:odd:bg-slate-900 dark:even:bg-slate-900/70 hover:bg-slate-50 dark:hover:bg-slate-800/60">
                             <td className="px-4 py-3 font-medium whitespace-nowrap">
                                 {c[0]}
                             </td>
                             <td className="px-4 py-3">
                                 <div className="leading-snug">{c[1]}</div>
-                                <div className="text-xs text-slate-500 mt-1">
+                                <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
                                     {c[2]}
                                 </div>
                             </td>

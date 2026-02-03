@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-slate-50 text-slate-700">
+    <footer className="bg-slate-50 text-slate-700 dark:bg-slate-950 dark:text-slate-300">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid gap-12 md:grid-cols-4">
           {/* ===== LOGO / INFO ===== */}
@@ -12,15 +12,15 @@ export default function Footer() {
                 className="h-12 w-12"
               />
               <div>
-                <p className="font-semibold text-slate-900 leading-tight">
+                <p className="font-semibold text-slate-900 dark:text-slate-100 leading-tight">
                   สาขาวิทยาการคอมพิวเตอร์
                 </p>
-                <p className="font-semibold text-slate-900">
+                <p className="font-semibold text-slate-900 dark:text-slate-100">
                   และเทคโนโลยีสารสนเทศ
                 </p>
               </div>
             </div>
-            <p className="text-sm leading-relaxed text-slate-600">
+            <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
               สถาบันแห่งนวัตกรรมด้านวิทยาศาสตร์และเทคโนโลยีเพื่อการพัฒนาชุมชนที่ยั่งยืน
             </p>
 
@@ -28,10 +28,10 @@ export default function Footer() {
 
           {/* ===== CONTACT ===== */}
           <div>
-            <h4 className="text-slate-900 font-medium mb-4">
+            <h4 className="text-slate-900 dark:text-slate-100 font-medium mb-4">
               ติดต่อสาขา
             </h4>
-            <ul className="space-y-2 text-sm text-slate-600">
+            <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
               <li>
                 คณะวิทยาศาสตร์
                 มหาวิทยาลัยราชภัฏอุดรธานี
@@ -50,32 +50,32 @@ export default function Footer() {
 
           {/* ===== QUICK LINKS ===== */}
           <div>
-            <h4 className="text-slate-900 font-medium mb-4">
+            <h4 className="text-slate-900 dark:text-slate-100 font-medium mb-4">
               เมนูลัด
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/" className="hover:text-blue-700 transition">
+                <a href="/" className="hover:text-blue-700 dark:hover:text-sky-400 transition">
                   หน้าแรก
                 </a>
               </li>
               <li>
-                <a href="/program-cs" className="hover:text-blue-700 transition">
+                <a href="/program-cs" className="hover:text-blue-700 dark:hover:text-sky-400 transition">
                   หลักสูตร CS
                 </a>
               </li>
               <li>
-                <a href="/program-it" className="hover:text-blue-700 transition">
+                <a href="/program-it" className="hover:text-blue-700 dark:hover:text-sky-400 transition">
                   หลักสูตร IT
                 </a>
               </li>
               <li>
-                <a href="/staff" className="hover:text-blue-700 transition">
+                <a href="/staff" className="hover:text-blue-700 dark:hover:text-sky-400 transition">
                   บุคลากร
                 </a>
               </li>
               <li>
-                <a href="/contact" className="hover:text-blue-700 transition">
+                <a href="/contact" className="hover:text-blue-700 dark:hover:text-sky-400 transition">
                   ติดต่อเรา
                 </a>
               </li>
@@ -84,7 +84,7 @@ export default function Footer() {
 
           {/* ===== SOCIAL ===== */}
           <div>
-            <h4 className="text-slate-900 font-medium mb-4">
+            <h4 className="text-slate-900 dark:text-slate-100 font-medium mb-4">
               ติดตามเรา
             </h4>
             <div className="flex items-center gap-4 text-sm">
@@ -92,7 +92,7 @@ export default function Footer() {
                 href="https://www.facebook.com/csitudru"
                 target="_blank"
                 aria-label="Facebook"
-                className="hover:text-blue-700 transition"
+                className="hover:text-blue-700 dark:hover:text-sky-400 transition"
               >
                 Facebook
               </a>
@@ -100,14 +100,14 @@ export default function Footer() {
                 href="https://line.me/R/ti/p/@290rxktj"
                 target="_blank"
                 aria-label="Website"
-                className="hover:text-blue-700 transition"
+                className="hover:text-blue-700 dark:hover:text-sky-400 transition"
               >
                 Line
               </a>
               <a
                 href="https://csit.udru.ac.th"
                 aria-label="Website"
-                className="hover:text-blue-700 transition"
+                className="hover:text-blue-700 dark:hover:text-sky-400 transition"
               >
                 Website
               </a>
@@ -117,8 +117,8 @@ export default function Footer() {
       </div>
 
       {/* ===== COPYRIGHT ===== */}
-      <div className="bg-white border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-6 py-5 text-sm text-slate-500 text-center">
+      <div className="bg-white border-t border-slate-200 dark:bg-slate-900 dark:border-slate-800">
+        <div className="max-w-7xl mx-auto px-6 py-5 text-sm text-slate-500 dark:text-slate-400 text-center">
           <span className="mr-2">
             © {new Date().getFullYear()}
           </span>

@@ -26,7 +26,7 @@ export default function LanguageSwitcher({ value = "th", onChange }) {
   return (
     <div ref={ref} className="relative hidden lg:block">
       {/* FLOATING LABEL */}
-      <span className="absolute -top-2 left-4 bg-white px-1 text-xs text-slate-500">
+      <span className="absolute -top-2 left-4 bg-white px-1 text-xs text-slate-500 dark:bg-slate-950 dark:text-slate-400">
         Language
       </span>
 
@@ -41,24 +41,28 @@ export default function LanguageSwitcher({ value = "th", onChange }) {
           transition-all duration-200
           ${
             open
-              ? "border-slate-900"
-              : "border-slate-300 hover:border-slate-400"
+              ? "border-slate-900 dark:border-slate-100"
+              : "border-slate-300 hover:border-slate-400 dark:border-slate-700 dark:hover:border-slate-500"
           }
         `}
       >
         <div className="flex items-center gap-3">
-          <span>{labels[value] ?? value}</span>
+          <span className="text-slate-800 dark:text-slate-100">{labels[value] ?? value}</span>
         </div>
 
-        {open ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+        {open ? (
+          <ChevronUp size={16} className="text-slate-600 dark:text-slate-300" />
+        ) : (
+          <ChevronDown size={16} className="text-slate-600 dark:text-slate-300" />
+        )}
       </button>
 
       {/* DROPDOWN */}
       <div
         className={`
           absolute right-0 mt-3 w-44
-          rounded-xl bg-white
-          shadow-2xl ring-1 ring-black/5
+          rounded-xl bg-white dark:bg-slate-900
+          shadow-2xl ring-1 ring-black/5 dark:ring-white/10
           overflow-hidden
           transition-all duration-200 origin-top
           ${
@@ -71,8 +75,10 @@ export default function LanguageSwitcher({ value = "th", onChange }) {
         {/* TH */}
         <button
           onClick={() => selectLang("th")}
-          className={`w-full flex items-center gap-3 px-4 py-3 text-sm ${
-            value === "th" ? "bg-slate-100" : "hover:bg-slate-100"
+          className={`w-full flex items-center gap-3 px-4 py-3 text-sm text-slate-800 dark:text-slate-100 ${
+            value === "th"
+              ? "bg-slate-100 dark:bg-slate-800"
+              : "hover:bg-slate-100 dark:hover:bg-slate-800"
           }`}
         >
           <span>ไทย</span>
@@ -81,8 +87,10 @@ export default function LanguageSwitcher({ value = "th", onChange }) {
         {/* EN */}
         <button
           onClick={() => selectLang("en")}
-          className={`w-full flex items-center gap-3 px-4 py-3 text-sm ${
-            value === "en" ? "bg-slate-100" : "hover:bg-slate-100"
+          className={`w-full flex items-center gap-3 px-4 py-3 text-sm text-slate-800 dark:text-slate-100 ${
+            value === "en"
+              ? "bg-slate-100 dark:bg-slate-800"
+              : "hover:bg-slate-100 dark:hover:bg-slate-800"
           }`}
         >
           <span>English</span>

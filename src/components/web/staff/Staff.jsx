@@ -121,16 +121,16 @@ export default function StaffPage() {
         <section className="max-w-7xl mx-auto px-4 py-20 font-sarabun">
             {/* HEADER */}
             <div className="text-center mb-16">
-                <h2 className="text-4xl font-semibold text-gray-800">
+                <h2 className="text-4xl font-semibold text-gray-800 dark:text-slate-100">
                     {t.title}
                 </h2>
-                <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+                <p className="text-gray-600 dark:text-slate-400 mt-4 max-w-2xl mx-auto">
                     {t.subtitle}
                 </p>
             </div>
 
             {/* GRID */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                 {staffData.map((staff, index) => (
                     <StaffCard key={index} staff={staff} />
                 ))}
@@ -148,9 +148,9 @@ function StaffCard({ staff }) {
   return (
     <div
       className="
-        group bg-slate-50 rounded-2xl w-[320px] sm:w-sm mx-auto
-        shadow-sm 
-        transition-all duration-300
+        group bg-slate-50 dark:bg-slate-900/60 rounded-2xl w-full max-w-sm mx-auto
+        shadow-sm ring-1 ring-slate-100 dark:ring-slate-800
+        transition-all duration-300 hover:-translate-y-1 hover:shadow-md
         flex flex-col
       "
     >
@@ -160,7 +160,7 @@ function StaffCard({ staff }) {
           src={img}
           alt={nameTH}
           className="
-            w-45 h-45
+            w-40 h-40
             shadow-sm
             rounded-full object-cover
             ring-4 ring-white
@@ -172,23 +172,23 @@ function StaffCard({ staff }) {
       {/* CONTENT */}
       <div className="px-6 pt-6 pb-8 text-center flex flex-col flex-1">
         {/* NAME */}
-        <h3 className="text-base font-semibold text-gray-800 leading-snug">
+        <h3 className="text-base font-semibold text-gray-800 dark:text-slate-100 leading-snug">
           {nameTH}
         </h3>
-        <p className="text-sm text-gray-500 mt-1">
+        <p className="text-sm text-gray-500 dark:text-slate-400 mt-1">
           {nameEN}
         </p>
 
-        <div className="my-4 h-px bg-gray-200" />
+        <div className="my-4 h-px bg-gray-200 dark:bg-slate-700" />
 
         {/* INFO */}
-        <div className="space-y-4 text-sm text-gray-700 flex-1 text-left">
+        <div className="space-y-4 text-sm text-gray-700 dark:text-slate-300 flex-1 text-left">
           {email && (
             <p>
               <span className="font-medium">{t.email}:</span>{" "}
               <a
                 href={`mailto:${email}`}
-                className="text-blue-600 hover:underline break-all"
+                className="text-blue-600 dark:text-sky-400 hover:underline break-all"
               >
                 {email}
               </a>
@@ -197,15 +197,15 @@ function StaffCard({ staff }) {
 
           {research ? (
             <div>
-              <p className="font-medium mb-1 text-gray-800">
+              <p className="font-medium mb-1 text-gray-800 dark:text-slate-100">
                 {t.research}
               </p>
-              <p className="text-gray-600 leading-relaxed line-clamp-3">
+              <p className="text-gray-600 dark:text-slate-400 leading-relaxed line-clamp-3">
                 {research}
               </p>
             </div>
           ) : (
-            <p className="italic text-gray-400">
+            <p className="italic text-gray-400 dark:text-slate-500">
               {t.noResearch}
             </p>
           )}
@@ -220,7 +220,8 @@ function StaffCard({ staff }) {
               rel="noopener noreferrer"
               className="
                 inline-flex items-center gap-1
-                text-blue-600 font-medium
+                text-blue-600 dark:text-sky-400 font-medium
+                hover:underline
               "
             >
               {t.website}

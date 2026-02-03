@@ -8,6 +8,8 @@
 @import "@fontsource/sarabun/600.css";
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* ===== Base styles ===== */
 @layer base {
     html {

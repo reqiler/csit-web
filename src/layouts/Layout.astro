@@ -11,9 +11,23 @@ import Footer from "../components/layouts/Footer.jsx";
     <meta name="viewport" content="width=device-width" />
     <!-- <link rel="icon" href="/favicon.png" /> -->
     <title>สาขาวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ | UDRU</title>
+    <script is:inline>
+      {`(() => {
+  try {
+    const root = document.documentElement;
+    const isHome = window.location.pathname === "/";
+    const saved = localStorage.getItem("theme") || "light";
+    if (isHome) {
+      root.classList.remove("dark");
+    } else {
+      root.classList.toggle("dark", saved === "dark");
+    }
+  } catch (_) {}
+})();`}
+    </script>
   </head>
 
-  <body class="min-h-screen bg-white text-slate-800">
+  <body class="min-h-screen bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
 		<Navbar client:idle />
 		<slot />
 		<Footer />

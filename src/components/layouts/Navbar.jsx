@@ -324,7 +324,11 @@ export default function Navbar() {
                                     href={menu.path}
                                     className="font-medium text-slate-800 dark:text-slate-100"
                                     onClick={(e) => {
-                                        if (menu.children) e.preventDefault();
+                                        if (menu.children) {
+                                            e.preventDefault();
+                                            return;
+                                        }
+                                        setSidebarOpen(false);
                                     }}
                                 >
                                     {menu.title}
@@ -364,6 +368,7 @@ export default function Navbar() {
                                                 rounded-xl
                                                 transition
                                                 "
+                                                onClick={() => setSidebarOpen(false)}
                                             >
                                                 {child.title}
                                             </a>

@@ -1,9 +1,10 @@
 ---
-import App from '../components/App.jsx';
-import Layout from '../layouts/Layout.astro';
-
+import Layout from "../layouts/Layout.astro";
+import "../styles/index.css";
 ---
 
-<Layout>
-	<App client:idle />
+<Layout pageClass="page-index">
+	<main class="page-index-body">
+		home page
+	</main>
 </Layout>

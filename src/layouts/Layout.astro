@@ -3,10 +3,20 @@ import "../styles/global.css";
 import Navbar from "../components/layouts/Navbar.jsx";
 import Footer from "../components/layouts/Footer.jsx";
 import { ViewTransitions } from "astro:transitions";
+
+const { pageClass = "page-default", bodyClass = "" } = Astro.props;
+const htmlClass = ["theme-preload", pageClass].filter(Boolean).join(" ");
+const defaultBodyClass =
+  pageClass === "page-default"
+    ? "min-h-screen text-slate-800 dark:text-slate-100"
+    : "";
+const bodyClassName = [pageClass, defaultBodyClass, bodyClass]
+  .filter(Boolean)
+  .join(" ");
 ---
 
 <!doctype html>
-<html lang="th" class="theme-preload">
+<html lang="th" class={htmlClass}>
   <head>
     <script is:inline>
       (() => {
@@ -47,8 +57,11 @@ import { ViewTransitions } from "astro:transitions";
     </script>
     <style is:inline>
       {`
-        html, body { background-color: #ffffff; }
-        html.dark, html.dark body { background-color: #020617; color: #f8fafc; }
+        html.page-default, html.page-default body { background-color: #ffffff; }
+        html.page-default.dark, html.page-default.dark body {
+          background-color: #020617;
+          color: #f8fafc;
+        }
       `}
     </style>
     <ViewTransitions />
@@ -58,10 +71,7 @@ import { ViewTransitions } from "astro:transitions";
     <title>สาขาวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศ | UDRU</title>
   </head>
 
-  <body
-    class="min-h-screen text-slate-800 dark:text-slate-100"
-    style="background-color: var(--app-bg, #ffffff);"
-  >
+  <body class={bodyClassName} style="background-color: var(--app-bg, #ffffff);">
     <Navbar client:load />
     <slot />
     <Footer />

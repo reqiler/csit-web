@@ -1,5 +1,6 @@
 import useLanguage from "../../common/useLanguage";
 
+// ===== แก้เฉพาะข้อความใน copy =====
 const copy = {
     th: {
         title: "วิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ",
@@ -16,32 +17,43 @@ const copy = {
             revisedLabel: "ปรับปรุงหลักสูตร",
             revisedValue: "พ.ศ. 2569",
         },
-        section1: "1. หมวดวิชาเฉพาะ (ไม่น้อยกว่า 91 หน่วยกิต)",
-        section1_1: "1.1 วิชาแกน (ไม่น้อยกว่า 61 หน่วยกิต)",
+
+        // ✅ ปรับให้เหมือนหน้าวิทคอม
+        section1: "1. หมวดวิชาเฉพาะ (91 หน่วยกิต)",
+        section1_1: "1.1 วิชาเอกบังคับ (70 หน่วยกิต)",
+
+        // (ของเดิมคุณใช้ section1_1_1 เป็น “แผนการเรียน” ได้เหมือนเดิม)
         section1_1_1: "1.1.1 แผนการเรียน (เลือก 1 แผน)",
         section1_1_1_note:
             "เลือกแผนใดแผนหนึ่ง: แผนสหกิจศึกษา หรือ แผนโครงงานนักศึกษา",
-        section1_2: "1.2 วิชาเอกเลือก (ไม่น้อยกว่า 21 หน่วยกิต)",
+
+        // ✅ ถ้าต้องการให้สอดคล้องรูปแบบเดียวกันด้วย (แนะนำ)
+        section1_2: "1.2 วิชาเอกเลือก (21 หน่วยกิต)",
         section1_2_note:
-            "เลือก 1 กลุ่มวิชา ไม่น้อยกว่า 12 หน่วยกิต และเลือกจากรายวิชาที่กำหนดเพิ่มเติมไม่น้อยกว่า 6 หน่วยกิต",
+            "เลือก 1 กลุ่มวิชา ไม่น้อยกว่า 12 หน่วยกิต และเลือกวิชาเลือกเพิ่มไม่น้อยกว่า 9 หน่วยกิต",
+
         track1: "1) กลุ่มเทคโนโลยีธุรกิจดิจิทัล",
         track2: "2) กลุ่มการพัฒนาซอฟต์แวร์แบบฟูลสแต็ก",
         track3: "3) กลุ่มวิทยาการข้อมูลเชิงประยุกต์",
         track4: "4) กลุ่มความมั่นคงปลอดภัยไซเบอร์",
         track5: "5) กลุ่มการออกแบบและการจัดการซอฟต์แวร์",
         track6: "6) กลุ่มการทดสอบระบบซอฟต์แวร์",
-        section1_3_2:
-            "1.3.2 เลือกจากรายวิชาที่กำหนด (ไม่น้อยกว่า 9 หน่วยกิต)",
+
+        // ✅ อันนี้ของเดิมโอเค แค่ปรับ wording ให้เหมือนกัน
+        section1_3_2: "1.2.2 วิชาเลือกเพิ่ม (9 หน่วยกิต)",
+
         section2: "2. หมวดวิชาศึกษาทั่วไป",
         section2_note: "ไม่น้อยกว่า 24 หน่วยกิต",
         section3: "3. หมวดวิชาเลือกเสรี",
         section3_note: "ไม่น้อยกว่า 6 หน่วยกิต",
+
         table: {
             code: "รหัสวิชา",
             name: "รายวิชา",
             credits: "หน่วยกิต",
         },
     },
+
     en: {
         title: "Bachelor of Science in Information Technology",
         subtitle: "Revised Curriculum 2026",
@@ -57,25 +69,33 @@ const copy = {
             revisedLabel: "Curriculum revised",
             revisedValue: "2026",
         },
-        section1: "1. Major Courses (at least 91 credits)",
-        section1_1: "1.1 Core Courses (at least 61 credits)",
+
+        // ✅ ปรับให้เหมือนหน้าวิทคอม
+        section1: "1. Major Courses (91 credits)",
+        section1_1: "1.1 Required Major Courses (70 credits)",
+
         section1_1_1: "1.1.1 Study Plan (choose 1 plan)",
         section1_1_1_note:
             "Choose either Cooperative Education plan or Senior Project plan",
-        section1_2: "1.2 Major Electives (at least 21 credits)",
+
+        section1_2: "1.2 Major Electives (21 credits)",
         section1_2_note:
-            "Choose 1 track with at least 12 credits, plus at least 6 additional credits from specified courses",
+            "Choose 1 track with at least 12 credits, plus at least 9 additional credits from specified courses",
+
         track1: "1) Digital Business Technology",
         track2: "2) Full-Stack Software Development",
         track3: "3) Applied Data Science",
         track4: "4) Cybersecurity",
         track5: "5) Software Design and Management",
         track6: "6) Software Testing",
-        section1_3_2: "1.3.2 Additional courses (at least 9 credits)",
+
+        section1_3_2: "1.2.2 Additional electives (9 credits)",
+
         section2: "2. General Education",
         section2_note: "At least 24 credits",
         section3: "3. Free Electives",
         section3_note: "At least 6 credits",
+
         table: {
             code: "Course Code",
             name: "Course Title",

@@ -12,7 +12,7 @@
 
 /* ===== Base styles ===== */
 @layer base {
-    html {
+    html.page-default {
         font-family:
             "Inter",
             "Sarabun",
@@ -21,14 +21,14 @@
         background-color: var(--app-bg, #ffffff);
     }
 
-    body {
+    html.page-default body {
         @apply text-slate-800 antialiased;
         background-color: var(--app-bg, #ffffff);
     }
 }
 
 @layer base {
-    .font-sarabun {
+    html.page-default .font-sarabun {
         font-family:
             "Sarabun",
             "Inter",
@@ -36,15 +36,15 @@
             sans-serif;
     }
 
-    h1 {
+    html.page-default h1 {
         @apply text-3xl font-semibold tracking-tight text-slate-900;
     }
 
-    h2 {
+    html.page-default h2 {
         @apply text-2xl font-semibold text-slate-900;
     }
 
-    p {
+    html.page-default p {
         @apply leading-relaxed text-slate-700;
     }
 }

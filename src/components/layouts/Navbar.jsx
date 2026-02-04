@@ -124,7 +124,7 @@ export default function Navbar() {
                         <img src="/favicon.png" alt="CS-IT" className="h-12 w-12 rounded-full shadow-md" />
                         <div className="flex flex-col">
                             <span className="font-bold text-xl text-blue-800 dark:text-slate-100 tracking-tight">
-                                CSIT<span className="text-blue-600 dark:text-sky-400">UDRU</span>
+                                CSIT <span className="text-blue-600 dark:text-sky-400">UDRU</span>
                             </span>
                             <span className="text-xs text-gray-600 dark:text-slate-400 font-medium">
                                 Udonthani Rajabhat University

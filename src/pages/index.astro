@@ -1,10 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import "../styles/index.css";
+import HeroSection from "../components/web/home/HeroSection";
 ---
 
-<Layout pageClass="page-index">
-	<main class="page-index-body">
-		home page
-	</main>
+<Layout>
+	<HeroSection client:idle />
 </Layout>

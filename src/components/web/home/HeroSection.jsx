@@ -25,7 +25,7 @@ export default function HeroSlider() {
     setIndex((i) => (i + 1) % slides.length);
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden max-w-7xl mx-auto">
       {/* ===== SLIDES WRAPPER ===== */}
       <div
         className="
@@ -46,7 +46,7 @@ export default function HeroSlider() {
             }}
           >
             {/* Full width to edges, fixed height (won't grow on wider screens) */}
-            <div className="relative h-[260px] sm:h-[360px] md:h-[440px] lg:h-180 w-full bg-slate-900">
+            <div className="relative w-full aspect-[16/9] overflow-hidden">
               <img
                 src={img}
                 alt={`slide-${i}`}

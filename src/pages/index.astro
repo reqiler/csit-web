@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroSection from "../components/web/home/HeroSection.jsx";
+import Course from "../components/web/home/Course.jsx";
+import NewSection from "../components/web/home/NewSection.jsx";
+
+
+---
+
+<Layout title="Home" >
+  <HeroSection client:idle />
+  <Course />
+  <NewSection />
+</Layout>
